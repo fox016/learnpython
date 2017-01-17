@@ -5,6 +5,10 @@ body
 	font-family:sans-serif;
 	color:#333;
 }
+h1
+{
+	font-size:1.2em;
+}
 .table
 {
 	display:table;
@@ -60,17 +64,22 @@ body
 	box-shadow: 2px 2px 10px 0px #e6e6e6;
 	overflow-y:auto;
 	padding-top:30px;
-	width:300px;
+	width:240px;
 }
 #sideBarParent
 {
-	width:300px;
+	width:240px;
+}
+#sideBar a
+{
+	text-decoration:none;
+	color:inherit;
 }
 .navlink
 {
 	margin-left:10px;
 	white-space:nowrap;
-	font-size:1.2em;
+	font-size:1.0em;
 	cursor:pointer;
 	padding:10px;
 }
@@ -79,17 +88,14 @@ body
 	background:#333 !important;
 	color:#eee !important;
 }
-.navlink a
-{
-	text-decoration:none;
-	color:inherit;
-}
 .sublink
 {
-	font-size:1.0em;
-	margin-left:40px;
+	font-size:0.8em;
+	margin-left:20px;
 }
 #pageContent
 {
 	padding:20px;
+	font-weight:300;
+	line-height:1.5em;
 }

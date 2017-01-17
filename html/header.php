@@ -1,3 +1,6 @@
+<?php
+	require_once('common.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +27,14 @@
 		<div class='row'>
 			<div class='cell top' id='sideBarParent'>
 				<div id='sideBar'>
-					<div class='navlink'><a href='/learnpython/'>Home</a></div>
-					<div class='navlink'><a href='/learnpython/?chapter=0'>Interactive Textbook</a></div>
-					<div class='navlink sublink'><a href='/learnpython/?chapter=1'>Chapter 1 - Data Types</a></div>
-					<div class='navlink'><a href='/learnpython/'>Assignments</a></div>
-					<div class='navlink sublink'><a href='/learnpython/'>Data Types</a></div>
+					<a href='/learnpython/'><div class='navlink'>Home</div></a>
+					<a href='/learnpython/?chapter=0'><div class='navlink'>Interactive Textbook</div></a>
+					<?php
+						foreach($chapters as $key=>$value)
+							echo "<a href='/learnpython/?chapter={$value['id']}'><div class='navlink sublink'>Chapter " . ($key+1) . " - {$value['name']}</div></a>\n";
+					?>
+					<a href='/learnpython/'><div class='navlink'>Problems</div></a>
+					<a href='/learnpython/'><div class='navlink sublink'>Basic Formulae</div></a>
 				</div>
 			</div>
 			<div class='cell top' id='pageContentParent'>

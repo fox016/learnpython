@@ -1,0 +1,8 @@
+[12-Jan-2017 11:18:44 America/Chicago] PHP Warning:  include_once(html/home.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 8
+[12-Jan-2017 11:18:44 America/Chicago] PHP Warning:  include_once(): Failed opening 'html/home.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 8
+[12-Jan-2017 11:19:22 America/Chicago] PHP Warning:  include_once(html/home.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 8
+[12-Jan-2017 11:19:22 America/Chicago] PHP Warning:  include_once(): Failed opening 'html/home.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 8
+[17-Jan-2017 10:04:04 America/Chicago] PHP Warning:  require_once(html/chapter1): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 14
+[17-Jan-2017 10:04:04 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter1' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 14
+[17-Jan-2017 10:05:03 America/Chicago] PHP Warning:  require_once(html/chapter2.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 19
+[17-Jan-2017 10:05:03 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter2.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 19

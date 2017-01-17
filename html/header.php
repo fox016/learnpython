@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Python Explorer - Interactive Textbook</title>
+	<title>Python Explorer</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -16,7 +16,7 @@
 		<table>
 			<tr>
 				<td><img src='images/python_logo.png'></td>
-				<td><a href='./'>Python Explorer</a></td>
+				<td><a href='/learnpython'>Python Explorer</a></td>
 			</tr>
 		</table>
 	</div>
@@ -24,20 +24,11 @@
 		<div class='row'>
 			<div class='cell top' id='sideBarParent'>
 				<div id='sideBar'>
-					<div class='navlink selected'>Home</div>
-					<div class='navlink'>Interactive Textbook</div>
-					<div class='navlink sublink'>Chapter 1 - Data Types</div>
-					<div class='navlink sublink'>Chapter 2</div>
-					<div class='navlink sublink'>Chapter 3</div>
-					<div class='navlink sublink'>Chapter 4</div>
-					<div class='navlink sublink'>Chapter 5</div>
-					<div class='navlink sublink'>Chapter 6</div>
-					<div class='navlink sublink'>Chapter 7</div>
-					<div class='navlink sublink'>Chapter 8</div>
-					<div class='navlink sublink'>Chapter 9</div>
-					<div class='navlink sublink'>Chapter 10</div>
-					<div class='navlink'>Assignments</div>
-					<div class='navlink sublink'>Data Types</div>
+					<div class='navlink'><a href='/learnpython/'>Home</a></div>
+					<div class='navlink'><a href='/learnpython/?chapter=0'>Interactive Textbook</a></div>
+					<div class='navlink sublink'><a href='/learnpython/?chapter=1'>Chapter 1 - Data Types</a></div>
+					<div class='navlink'><a href='/learnpython/'>Assignments</a></div>
+					<div class='navlink sublink'><a href='/learnpython/'>Data Types</a></div>
 				</div>
 			</div>
 			<div class='cell top' id='pageContentParent'>

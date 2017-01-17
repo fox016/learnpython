@@ -11,9 +11,10 @@ $chapters = array(
 	array("id" => "iteration", "name" => "Loops"),
 	array("id" => "lists", "name" => "Lists"),
 	array("id" => "dictionaries", "name" => "Dictionaries"),
-	array("id" => "sets", "name" => "Sets"),
 	array("id" => "classes", "name" => "Classes &amp; Objects"),
 	array("id" => "recursion", "name" => "Recursion"),
 	array("id" => "generators", "name" => "Generators"),
+	array("id" => "sets", "name" => "Sets"),
+	array("id" => "tuples", "name" => "Tuples"),
 	array("id" => "comprehensions", "name" => "List Comprehensions")
 );

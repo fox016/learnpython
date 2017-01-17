@@ -99,3 +99,13 @@ h1
 	font-weight:300;
 	line-height:1.5em;
 }
+#pageContent a
+{
+	color:#336699;
+	text-decoration:none;
+	cursor:pointer;
+}
+#pageContent a:hover
+{
+	text-decoration:underline;
+}

@@ -33,8 +33,8 @@
 						foreach($chapters as $key=>$value)
 							echo "<a href='/learnpython/?chapter={$value['id']}'><div class='navlink sublink'>Chapter " . ($key+1) . " - {$value['name']}</div></a>\n";
 					?>
-					<a href='/learnpython/'><div class='navlink'>Problems</div></a>
-					<a href='/learnpython/'><div class='navlink sublink'>Basic Formulae</div></a>
+					<a href='/learnpython/'><div class='navlink'>Coding Challenges</div></a>
+					<a href='/learnpython/'><div class='navlink sublink'>Math Problems</div></a>
 				</div>
 			</div>
 			<div class='cell top' id='pageContentParent'>

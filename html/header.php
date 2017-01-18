@@ -23,10 +23,12 @@
 			</tr>
 		</table>
 	</div>
+	<div id='expandSideBar'  title='Expand Side Bar' style='display:none'>&raquo;</div>
 	<div class='table wide'>
 		<div class='row'>
 			<div class='cell top' id='sideBarParent'>
 				<div id='sideBar'>
+					<div id='collapseSideBar' title='Collapse Side Bar'>&laquo;</div>
 					<a href='/learnpython/'><div class='navlink'>Home</div></a>
 					<a href='/learnpython/?chapter=0'><div class='navlink'>Interactive Textbook</div></a>
 					<?php

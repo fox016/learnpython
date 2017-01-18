@@ -1,7 +1,7 @@
 <?php
 
 $chapters = array(
-	array("id" => "datatypes", "name" => "Data Types"),
+	array("id" => "variables", "name" => "Variables"),
 	array("id" => "numbertypes", "name" => "Number Types"),
 	array("id" => "booleans", "name" => "Booleans"),
 	array("id" => "strings", "name" => "Strings"),

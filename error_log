@@ -66,3 +66,9 @@
 [17-Jan-2017 17:39:55 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter_0.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 9
 [17-Jan-2017 17:40:06 America/Chicago] PHP Warning:  require_once(html/chapter_numbertypes.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 9
 [17-Jan-2017 17:40:06 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter_numbertypes.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 9
+[17-Jan-2017 17:41:33 America/Chicago] PHP Warning:  require_once(html/chapter_0.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 9
+[17-Jan-2017 17:41:33 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter_0.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 9
+[17-Jan-2017 17:41:50 America/Chicago] PHP Warning:  require_once(html/chapter_0.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 9
+[17-Jan-2017 17:41:50 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter_0.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 9
+[18-Jan-2017 09:22:39 America/Chicago] PHP Warning:  require_once(html/chapter_0.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/index.php on line 9
+[18-Jan-2017 09:22:39 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'html/chapter_0.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/index.php on line 9

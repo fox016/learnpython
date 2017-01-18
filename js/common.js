@@ -1,13 +1,31 @@
+/*
+ * Init page
+ */
 $(document).ready(function()
 {
 	$(window).resize(sideBarResize).trigger('resize');
+
+	// Click listeners
+	$("#collapseSideBar").click(function() {
+		$("#sideBarParent").hide();
+		$("#expandSideBar").show();
+	});
+	$("#expandSideBar").click(function() {
+		$("#expandSideBar").hide();
+		$("#sideBarParent").show();
+	});
 });
 
+// Trigger resize once window is completely done loading
 window.onload = function()
 {
 	$(window).trigger('resize');
 };
 
+/*
+ * Resize side bar and content height to fit perfectly in window
+ * Called on init and whenever window changes size
+ */
 function sideBarResize()
 {
 	var windowHeight = $(window).outerHeight();

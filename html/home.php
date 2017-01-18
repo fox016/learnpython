@@ -1,7 +1,7 @@
 <div id='homeWrapper'>
 	<h1>About</h1>
 	<p>
-		Welcome to Python Explorer! Python Explorer is an open-source, free-to-use, ad-free web application to help learners explore the Python programming language at their preferred pace. Beginning coders can learn about general principles of coding while learning the basics of Python, while more experienced coders can start solving challenging coding problems right away.
+		Welcome to Python Explorer! Python Explorer is an open-source, free-to-use, ad-free web application to help learners explore the Python programming language at their preferred pace. Beginning coders can learn about general principles of coding while learning the basics of Python, while more experienced coders can start solving complex coding challenges right away.
 	</p>
 	<p>
 		To contribute to the project, take a look at the <a href='https://github.com/fox016/learnpython' target='_blank'>Git repo on GitHub</a>.

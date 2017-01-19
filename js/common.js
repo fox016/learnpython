@@ -5,7 +5,13 @@ $(document).ready(function()
 {
 	$(window).resize(sideBarResize).trigger('resize');
 
+	$("#link_" + $("#currentPage").val()).addClass('selected');
+
 	// Click listeners
+	$(".navlink").click(function() {
+		$(".navlink").removeClass('selected');
+		$(this).addClass('selected');
+	});
 	$("#collapseSideBar").click(function() {
 		$("#sideBarParent").hide();
 		$("#expandSideBar").show();

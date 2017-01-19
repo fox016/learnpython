@@ -1,3 +1,6 @@
+<p>Lorem ipsum</p>
+
+<!--
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="pre-exercise-code">
 		greeting = "Hello, world!"
@@ -20,3 +23,4 @@
 	</code>
 	<div data-type="hint">Use the print function to print the <code>greeting</code> variable: "<code>print(greeting)</code>"</div>
 </div>
+-->

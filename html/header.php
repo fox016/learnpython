@@ -29,11 +29,11 @@
 			<div class='cell top' id='sideBarParent'>
 				<div id='sideBar'>
 					<div id='collapseSideBar' title='Collapse Side Bar'>&laquo;</div>
-					<a href='/learnpython/'><div class='navlink'>Home</div></a>
-					<a href='/learnpython/?chapter=0'><div class='navlink'>Interactive Textbook</div></a>
+					<a href='/learnpython/'><div id='link_home' class='navlink'>Home</div></a>
+					<a href='/learnpython/?chapter=0'><div id='link_chapter_0' class='navlink'>Interactive Textbook</div></a>
 					<?php
 						foreach($chapters as $key=>$value)
-							echo "<a href='/learnpython/?chapter={$value['id']}'><div class='navlink sublink'>Chapter " . ($key+1) . " - {$value['name']}</div></a>\n";
+							echo "<a href='/learnpython/?chapter={$value['id']}'><div id='link_chapter_{$value['id']}' class='navlink sublink'>Chapter " . ($key+1) . " - {$value['name']}</div></a>\n";
 					?>
 					<a href='/learnpython/'><div class='navlink'>Coding Challenges</div></a>
 					<a href='/learnpython/'><div class='navlink sublink'>Math Problems</div></a>

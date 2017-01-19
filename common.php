@@ -1,5 +1,7 @@
 <?php
 
+$currentPage = NULL;
+
 $chapters = array(
 	array("id" => "variables", "name" => "Variables"),
 	array("id" => "numbertypes", "name" => "Number Types"),
@@ -18,3 +20,29 @@ $chapters = array(
 	array("id" => "tuples", "name" => "Tuples"),
 	array("id" => "comprehensions", "name" => "List Comprehensions")
 );
+
+/*
+ * Show chapter associated with given chapter ID
+ */
+function showChapter($chapterId)
+{
+	global $chapters;
+	global $currentPage;
+	$currentPage = "chapter_$chapterId";
+	foreach($chapters as $index => $chapter)
+	{
+		if($chapter['id'] == $_REQUEST['chapter'])
+		{
+			echo "<h1>Chapter " . ($index+1) . " - {$chapter['name']}</h1>";
+			require_once("html/chapter_" . $_REQUEST['chapter'] . ".php");
+			return;
+		}
+	}
+}
+
+function showHome()
+{
+	global $currentPage;
+	$currentPage = "home";
+	require_once('html/home.php');
+}

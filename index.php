@@ -6,9 +6,9 @@ try
 	require_once('html/header.php');
 
 	if(isset($_REQUEST['chapter']))
-		require_once("html/chapter_" . $_REQUEST['chapter'] . ".php");
+		showChapter($_REQUEST['chapter']);
 	else
-		require_once('html/home.php');
+		showHome();
 
 	require_once('html/footer.php');
 }

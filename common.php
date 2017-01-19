@@ -29,6 +29,15 @@ function showChapter($chapterId)
 	global $chapters;
 	global $currentPage;
 	$currentPage = "chapter_$chapterId";
+
+	// Textbook opener
+	if($chapterId == "0")
+	{
+		require_once("html/chapter_0.php");
+		return;
+	}
+
+	// Generic chapters
 	foreach($chapters as $index => $chapter)
 	{
 		if($chapter['id'] == $_REQUEST['chapter'])

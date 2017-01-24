@@ -3,6 +3,7 @@
 $currentPage = NULL;
 
 $chapters = array(
+	array("id" => "intro", "name" => "Introduction"),
 	array("id" => "variables", "name" => "Variables"),
 	array("id" => "numbertypes", "name" => "Number Types"),
 	array("id" => "booleans", "name" => "Booleans"),

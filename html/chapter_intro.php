@@ -30,7 +30,34 @@ Unfortunately, it is very hard for humans to read and understand binary code. Wr
 </p>
 
 <p>
-TODO: high level vs low level languages (what that means, examples of each)
+Programming languages are often described as either being "high-level" or "low-level" languages. A <em>high-level language</em> is a programming language that is easier for humans to read and write, but requires more work to be translated (or <em>compiled</em>) into binary and thus gives the programmer less direct control over the computer. By contrast, a <em>low-level language</em> is one that is harder for humans to read and write, but translates more directly into binary and thus gives the programmer more direct control over the computer. High level languages&mdash;such as Java, C#, C++, Python, PHP, and JavaScript&mdash;are ideal for learning basic coding skills and for architecting big applications. Low level languages&mdash;such as Assembly and C&mdash;are ideal for learning the underlying fundamentals of computing and for writing powerful core software such as operating systems.
 </p>
 
 <h2>What is Python?</h2>
+
+<p>
+Python is a high-level programming language that can run on all common operating systems and prides itself on being easy to learn. This textbook allows you to write and run Python code in your internet browser, but you can learn more about how to run Python on your own computer at <a target='_blank' href='https://www.python.org/about/'>python.org</a>.
+</p>
+
+<p>
+One of the goals of the Python programming language is to define intuitive syntax that makes it more human-readable. For example, to print text to the screen, the command is simply <code>print</code>. Use the space below to play with the <code>print</code> function to print text to the output window. Click "Run" to see how the example works.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="pre-exercise-code">
+	</code>
+	<code data-type="sample-code">
+		print("Hello, world!")	
+		print("Python is fun and easy to learn!")
+	</code>
+	<code data-type="solution">
+		print("Hello, world!")	
+		print("Python is fun and easy to learn!")
+	</code>
+	<code data-type="sct">
+		test_function("print")
+	</code>
+	<div data-type="hint">
+		Use the <code>print</code> function to print text to the screen. Use the format <code>print("<em>Enter text here</em>")</code>.
+	</div>
+</div>

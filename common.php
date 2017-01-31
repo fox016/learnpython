@@ -34,7 +34,7 @@ function showChapter($chapterId)
 	// Textbook opener
 	if($chapterId == "0")
 	{
-		require_once("html/chapter_0.php");
+		include("html/chapter_0.php");
 		return;
 	}
 
@@ -44,7 +44,19 @@ function showChapter($chapterId)
 		if($chapter['id'] == $_REQUEST['chapter'])
 		{
 			echo "<h1>Chapter " . ($index+1) . " - {$chapter['name']}</h1>";
-			require_once("html/chapter_" . $_REQUEST['chapter'] . ".php");
+			include("html/chapter_" . $_REQUEST['chapter'] . ".php");
+			$prevChapter = ($index == 0) ? NULL : $chapters[$index-1];
+			$nextChapter = ($index == count($chapters)-1) ? NULL : $chapters[$index+1];
+			?>
+			<div class='chapterNav'>
+				<?php if($prevChapter !== NULL) { ?>
+				<a href="./?chapter=<?php echo $prevChapter['id'];?>"><button class='chapterNavPrev'><span class='chapterNavArrows'>&laquo;</span><?php echo $prevChapter['name'];?></button></a>
+				<?php } ?>
+				<?php if($nextChapter !== NULL) { ?>
+				<a href="./?chapter=<?php echo $nextChapter['id'];?>"><button class='chapterNavNext'><?php echo $nextChapter['name'];?><span class='chapterNavArrows'>&raquo;</span></button></a>
+				<?php } ?>
+			</div>
+			<?php
 			return;
 		}
 	}

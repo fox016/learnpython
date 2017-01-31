@@ -12,7 +12,6 @@ h1
 h2
 {
 	font-size:1.2em;
-	font-family: 'Arima Madurai', cursive;
 }
 .table
 {
@@ -136,4 +135,30 @@ h2
 #pageContent a:hover
 {
 	text-decoration:underline;
+}
+.chapterNav {
+	margin-top:50px;
+}
+.chapterNav button {
+	padding:5px 0;
+	width:200px;
+	border-radius:5px;
+	border:none;
+	font-size:0.9em;
+	color:#eee;
+	background-color:#333;
+	cursor:pointer;
+}
+.chapterNav button:hover {
+	color:#fff;
+	background-color:#444;
+}
+.chapterNav .chapterNavPrev {
+	float:left;
+}
+.chapterNav .chapterNavNext {
+	float:right;
+}
+.chapterNavArrows {
+	margin:0 10px;
 }

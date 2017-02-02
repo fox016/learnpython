@@ -114,3 +114,6 @@
 [31-Jan-2017 11:15:29 America/Chicago] PHP Warning:  include(html/chapter_numbertypes.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/common.php on line 47
 [31-Jan-2017 11:15:29 America/Chicago] PHP Warning:  include(html/chapter_numbertypes.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/common.php on line 47
 [31-Jan-2017 11:15:29 America/Chicago] PHP Warning:  include(): Failed opening 'html/chapter_numbertypes.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/common.php on line 47
+[02-Feb-2017 10:52:20 America/Chicago] PHP Warning:  include(html/chapter_numbertypes.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/common.php on line 47
+[02-Feb-2017 10:52:20 America/Chicago] PHP Warning:  include(html/chapter_numbertypes.php): failed to open stream: No such file or directory in /home/natefoxc/public_html/learnpython/common.php on line 47
+[02-Feb-2017 10:52:20 America/Chicago] PHP Warning:  include(): Failed opening 'html/chapter_numbertypes.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/natefoxc/public_html/learnpython/common.php on line 47

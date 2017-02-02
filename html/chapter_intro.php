@@ -5,10 +5,10 @@ Technology is constantly changing and improving. Technology has the power to aff
 <h2>What is Coding?</h2>
 
 <p>
-Simply put, coding is writing commands to a computer. Computer code is a series of specific, unambiguous commands that tell the computer what to do. Computers function by writing data to memory, reading data from memory, and performing computations on that data. Commands can be used to tell the computer to display text, to perform mathematical functions on numbers, to process user input, etc.
+Simply put, coding is writing commands to a computer. Computer code is a series of specific, unambiguous commands that tell the computer what to do. Computers function by writing data to memory, reading data from memory, and performing calculations on that data. Commands can be used to tell the computer to display text, to perform mathematical functions on numbers, to process user input, etc.
 </p>
 
-<h2>What are Programming Languages?</h2>
+<h2>What is a Programming Language?</h2>
 
 <p>
 Unfortunately, computers don't speak English. English is too ambiguous for computers to understand perfectly. Here are some common examples of English ambiguity:
@@ -22,11 +22,11 @@ Unfortunately, computers don't speak English. English is too ambiguous for compu
 </ul>
 
 <p>
-To avoid these problems with ambiguity, computers speak a language called <em>binary</em> or <em>machine code</em>. Binary is a language made up of 0s and 1s, and the computer hardware interprets these 0s and 1s (known as <em>bits</em>) to control electrical voltages in the computer, and those electrical voltages carry out the commands. On a 64-bit operating system, every command is composed of a series of 64 bits. In the early days of computing, programmers wrote commands in 0s and 1s. This works because computers can understand the language of binary without ambiguity.
+To avoid these problems with ambiguity, computers speak a language called <em>binary</em> or <em>machine code</em>. Binary is a language made up of 0s and 1s, and the computer hardware interprets these 0s and 1s (known as <em>bits</em>) to control electrical voltages in the computer, and those electrical voltages carry out the commands. For example, on a 64-bit operating system, every command is composed of a series of 64 bits. In the early days of computing, programmers wrote commands in 0s and 1s. This works well because computers can understand the language of binary without ambiguity.
 </p>
 
 <p>
-Unfortunately, it is very hard for humans to read and understand binary code. Writing and maintaining binary code is difficult and requires a lot of work just to write basic commands that accomplish very little. What we need is a language that computers can understand perfectly and that humans can easily read and write. <em>Programming languages</em> meet the needs of both computers and human coders. Programming languages define language rules that are unambiguous and can be translated directly into binary for computers, and they also use syntax that is relatively easy for humans to read and write.
+Unfortunately, it is very hard for humans to read and understand binary code. Writing and maintaining binary code is difficult and requires a lot of work just to write basic commands that accomplish very little. What we need is a language that computers can understand perfectly and that humans can easily read and write. <em>Programming languages</em> meet the needs of both computers and human programmers. Programming languages define language rules that are unambiguous and can be translated directly into binary for computers, and they also use syntax that is relatively easy for humans to read and write.
 </p>
 
 <p>
@@ -36,7 +36,7 @@ Programming languages are often described as either being "high-level" or "low-l
 <h2>What is Python?</h2>
 
 <p>
-Python is a high-level programming language that can run on all common operating systems and prides itself on being easy to learn. This textbook allows you to write and run Python code in your internet browser, but you can learn more about how to run Python on your own computer at <a target='_blank' href='https://www.python.org/about/'>python.org</a>.
+Python is a high-level programming language that can run on all common operating systems and prides itself on being easy to learn. This textbook allows you to write and run Python code in your internet browser, but you can learn more about how to install and run Python on your own computer at <a target='_blank' href='https://www.python.org/about/'>python.org</a>.
 </p>
 
 <p>

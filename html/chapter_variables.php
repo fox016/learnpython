@@ -106,7 +106,7 @@ As previously mentioned, common types of variable values include numbers, string
 </div>
 
 <p>
-Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string "42" is different than the integer 42, and both are different than the float 42.0. Similarly, the boolean False is different than the string "False". The following chapters will illustrate how the computer treats different variable types differently.
+Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string "42" is different than the integer 42, and both are different than the float 42.0. Similarly, the boolean False is different than the string "False". The following chapters will illustrate how the computer treats different variable types differently and what you as the programmer can do with different variable types.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -123,7 +123,7 @@ Numbers, strings, and booleans all behave differently, so it's important to know
 
 		# Print each variable value
 
-		# Print each variable value type
+		# Print each variable type
 	</code>
 	<code data-type="solution">
 		# Define an int named x with a value of 4
@@ -144,7 +144,7 @@ Numbers, strings, and booleans all behave differently, so it's important to know
 		print(name)
 		print(is_valid)
 
-		# Print each variable value type
+		# Print each variable type
 		print(type(x))
 		print(type(y))
 		print(type(name))

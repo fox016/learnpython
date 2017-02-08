@@ -13,8 +13,10 @@
 	<h1>Table of Contents</h1>
 	<table>
 <?php
-	foreach($chapters as $key=>$value)
-		echo "<tr><td><a href='/learnpython/?chapter={$value['id']}'>Chapter " . ($key+1) . " - {$value['name']}</a></td></tr>\n";
+	$chapterManager = ChapterManager::getInstance();
+	$chapters = $chapterManager->getChapterList();
+	foreach($chapters as $index=>$chapter)
+		echo "<tr><td><a href='/learnpython/?chapter={$chapter->id}'>Chapter " . ($index+1) . " - {$chapter->name}</a></td></tr>\n";
 ?>
 	</table>
 </div>

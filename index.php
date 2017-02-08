@@ -3,6 +3,9 @@
 try
 {
 	require_once('common.php');
+
+	buildChapterList();
+
 	require_once('html/header.php');
 
 	if(isset($_REQUEST['chapter']))

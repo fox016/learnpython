@@ -162,3 +162,12 @@ h2
 .chapterNavArrows {
 	margin:0 10px;
 }
+.powered-by-datacamp {
+	font-size:0.5em !important;
+}
+.powered-by-datacamp a {
+	font-size:0.5em !important;
+}
+.powered-by-datacamp .logo {
+	width:20px !important;
+}

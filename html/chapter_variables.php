@@ -106,7 +106,7 @@ As previously mentioned, common types of variable values include numbers, string
 </div>
 
 <p>
-Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string "42" is different than the integer 42, and both are different than the float 42.0. Similarly, the boolean False is different than the string "False". This chapter will later illustrate how the computer treats different variable types differently.
+Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string "42" is different than the integer 42, and both are different than the float 42.0. Similarly, the boolean False is different than the string "False". The following chapters will illustrate how the computer treats different variable types differently.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -156,15 +156,16 @@ Numbers, strings, and booleans all behave differently, so it's important to know
 		test_object("name")
 		test_object("is_valid")
 		test_function("print")
-		test_output_contains("4", False, "Output should show '4'")
-		test_output_contains("-12.34", False, "Output should show '-12.34'")
-		test_output_contains("Bob", False, "Output should show 'Bob'")
-		test_output_contains("True", False, "Output should show 'True'")
+		test_output_contains("4", False, "Output should show <code>4</code>")
+		test_output_contains("-12.34", False, "Output should show <code>12.34</code>")
+		test_output_contains("Bob", False, "Output should show <code>Bob</code>")
+		test_output_contains("True", False, "Output should show <code>True</code>")
+		test_output_contains("class 'int'", False, "Output should show type of <code>x</code>")
+		test_output_contains("class 'float'", False, "Output should show type of <code>y</code>")
+		test_output_contains("class 'str'", False, "Output should show type of <code>name</code>")
+		test_output_contains("class 'bool'", False, "Output should show type of <code>is_valid</code>")
 		success_msg("Great job!")
 	</code>
 	<div data-type="hint">
 	</div>
-</div> <!-- TODO test output contains variable types -->
-
-<h2>Modifying Variables</h2>
-TODO
+</div>

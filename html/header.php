@@ -1,6 +1,3 @@
-<?php
-	require_once('common.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,8 +34,8 @@
 						foreach($chapters as $index=>$chapter)
 							echo "<a href='/learnpython/?chapter={$chapter->id}'><div id='link_chapter_{$chapter->id}' class='navlink sublink'>Chapter " . ($index+1) . " - {$chapter->name}</div></a>\n";
 					?>
-					<a href='/learnpython/'><div class='navlink'>Coding Challenges</div></a>
-					<a href='/learnpython/'><div class='navlink sublink'>Math Problems</div></a>
+					<a href='/learnpython/?challengeSet=0'><div id='link_challenge_set_0' class='navlink'>Coding Challenges</div></a>
+					<a href='/learnpython/?challengeSet=math'><div id='link_challenge_set_math' class='navlink sublink'>Math Challenges</div></a>
 				</div>
 			</div>
 			<div class='cell top' id='pageContentParent'>

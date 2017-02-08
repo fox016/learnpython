@@ -20,7 +20,10 @@ class ChapterManager
 		$this->chapterList = array();
 	}
 
-	protected function __clone(){}
+	protected function __clone()
+	{
+		throw new Exception("ChapterManager does not support the clone function");
+	}
 
 	public function addChapter($id, $name)
 	{
@@ -30,14 +33,6 @@ class ChapterManager
 		$chapter = new Chapter(count($this->chapterList), $id, $name);
 		$this->chapterList[] = $chapter;
 		$this->idToChapterMap[$id] = $chapter;
-	}
-
-	public function getChapterByIndex($index)
-	{
-		if($index < 0 || $index >= count($this->chapterList))
-			throw new Exception("Invalid chapter index: $index");
-
-		return $this->chapterList[$index];
 	}
 
 	public function getChapterById($id)
@@ -53,19 +48,11 @@ class ChapterManager
 		return $this->chapterList;
 	}
 
-	public function getNextChapter($chapter)
+	public function getChapterByIndex($index)
 	{
-		$index = $chapter->index+1;
 		if($index < 0 || $index >= count($this->chapterList))
 			return NULL;
-		return $this->chapterList[$index];
-	}
 
-	public function getPrevChapter($chapter)
-	{
-		$index = $chapter->index-1;
-		if($index < 0 || $index >= count($this->chapterList))
-			return NULL;
 		return $this->chapterList[$index];
 	}
 

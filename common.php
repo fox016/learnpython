@@ -50,8 +50,8 @@ function showChapter($chapterId)
 	$chapter = $chapterManager->getChapterById($chapterId);
 	echo "<h1>Chapter " . ($chapter->index+1) . " - {$chapter->name}</h1>";
 	include("html/chapter_" . $chapter->id . ".php");
-	$prevChapter = $chapterManager->getPrevChapter($chapter);
-	$nextChapter = $chapterManager->getNextChapter($chapter);
+	$prevChapter = $chapterManager->getChapterByIndex($chapter->index-1);
+	$nextChapter = $chapterManager->getChapterByIndex($chapter->index+1);
 	?>
 
 	<div class='chapterNav'>
@@ -69,6 +69,22 @@ function showChapter($chapterId)
 
 	<?php
 	return;
+}
+
+/*
+ * Show challenge set associated with given chapter ID
+ */
+function showChallengeSet($challengeSetId)
+{
+	echo "TODO show challenge set $challengeSetId";
+}
+
+/*
+ * Show challenge associated with given chapter ID
+ */
+function showChallenge($challengeId)
+{
+	echo "TODO show challenge $challengeId";
 }
 
 /*

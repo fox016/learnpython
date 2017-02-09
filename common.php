@@ -41,7 +41,7 @@ function showChapter($chapterId)
 	// Textbook opener
 	if($chapterId == "0")
 	{
-		include("html/chapter_0.php");
+		include("html/chapters/0.php");
 		return;
 	}
 
@@ -49,7 +49,7 @@ function showChapter($chapterId)
 	$chapterManager = ChapterManager::getInstance();
 	$chapter = $chapterManager->getChapterById($chapterId);
 	echo "<h1>Chapter " . ($chapter->index+1) . " - {$chapter->name}</h1>";
-	include("html/chapter_" . $chapter->id . ".php");
+	include("html/chapters/" . $chapter->id . ".php");
 	$prevChapter = $chapterManager->getChapterByIndex($chapter->index-1);
 	$nextChapter = $chapterManager->getChapterByIndex($chapter->index+1);
 	?>

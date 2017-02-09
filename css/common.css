@@ -171,3 +171,26 @@ h2
 .powered-by-datacamp .logo {
 	width:20px !important;
 }
+.textbookTable {
+	border: 1px solid #333;
+	border-collapse: collapse;
+	background: #fefefe;
+	margin: 10px 0;
+}
+.textbookTable thead th {
+	background: #369;
+	color: #fff;
+	font-weight: normal;
+	padding: 3px 20px;
+	border: 1px solid #369;
+}
+.textbookTable thead td {
+	text-align: left;
+	padding: 5px 10px;
+	color: #999;
+	font-weight: normal;
+}
+.textbookTable tbody td {
+	padding: 5px 10px;
+	vertical-align:top;
+}

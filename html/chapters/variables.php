@@ -69,7 +69,7 @@ Notice that variable names cannot contain spaces. For example, <code>employee ag
 <h2>Variable Types</h2>
 
 <p>
-As previously mentioned, common types of variable values include numbers, strings, and booleans. Numbers are divided into two different types: int and float. An int is an integer, which is a whole number without a decimal (e.g., -40, 0, 42, 28308732). A float is a decimal floating-point number, which is any number with a decimal (e.g., 3.14159, -43.2, 1.0, 0.0). In Python, passing a variable name into the <code>type</code> function will return the type of the value the variable is currently storing.
+As previously mentioned, common types of variable values include numbers, strings, and booleans. Numbers are divided into different types, the two most common types being int and float. An int is an integer, which is a whole number without a decimal (e.g., -40, 0, 42, 28308732). A float is a decimal floating-point number, which is any number with a decimal (e.g., 3.14159, -43.2, 1.0, 0.0). In Python, passing a variable name into the <code>type</code> function will return the type of the value the variable is currently storing.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -80,6 +80,7 @@ As previously mentioned, common types of variable values include numbers, string
 		my_float = 1.0
 		my_str = "1"
 
+		# Print each variable type
 		print(type(my_int))
 		print(type(my_float))
 		print(type(my_str))
@@ -89,6 +90,7 @@ As previously mentioned, common types of variable values include numbers, string
 		my_float = 1.0
 		my_str = "1"
 
+		# Print each variable type
 		print(type(my_int))
 		print(type(my_float))
 		print(type(my_str))
@@ -98,7 +100,7 @@ As previously mentioned, common types of variable values include numbers, string
 		test_object("my_float")
 		test_object("my_str")
 		test_function("print")
-		success_msg("Great job!")
+		success_msg("Process complete")
 	</code>
 	<div data-type="hint">
 		Just click "Run"
@@ -155,7 +157,6 @@ Numbers, strings, and booleans all behave differently, so it's important to know
 		test_object("y")
 		test_object("name")
 		test_object("is_valid")
-		test_function("print")
 		test_output_contains("4", False, "Output should show <code>4</code>")
 		test_output_contains("-12.34", False, "Output should show <code>12.34</code>")
 		test_output_contains("Bob", False, "Output should show <code>Bob</code>")
@@ -164,8 +165,9 @@ Numbers, strings, and booleans all behave differently, so it's important to know
 		test_output_contains("class 'float'", False, "Output should show type of <code>y</code>")
 		test_output_contains("class 'str'", False, "Output should show type of <code>name</code>")
 		test_output_contains("class 'bool'", False, "Output should show type of <code>is_valid</code>")
-		success_msg("Great job!")
+		success_msg("Now you know how to define variables and classify their types!")
 	</code>
 	<div data-type="hint">
+		Print each variable value by using <code>print(<em>name</em>)</code>. Print each variable type by using <code>print(type(<em>name</em>))</code>.
 	</div>
 </div>

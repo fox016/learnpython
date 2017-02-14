@@ -21,13 +21,14 @@ function buildChapterList()
 	$chapterManager->addChapter("errors", "Fixing Errors");
 	$chapterManager->addChapter("iteration", "Loops");
 	$chapterManager->addChapter("lists", "Lists");
+	$chapterManager->addChapter("fileio", "File I/O");
 	$chapterManager->addChapter("dictionaries", "Dictionaries");
 	$chapterManager->addChapter("classes", "Classes &amp; Objects");
-	$chapterManager->addChapter("recursion", "Recursion");
-	$chapterManager->addChapter("generators", "Generators");
 	$chapterManager->addChapter("sets", "Sets");
 	$chapterManager->addChapter("tuples", "Tuples");
 	$chapterManager->addChapter("comprehensions", "List Comprehensions");
+	$chapterManager->addChapter("recursion", "Recursion");
+	$chapterManager->addChapter("generators", "Generators");
 }
 
 /*

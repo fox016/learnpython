@@ -36,7 +36,7 @@ Programming languages are often described as either being "high-level" or "low-l
 <h2>What is Python?</h2>
 
 <p>
-Python is a high-level programming language that can run on all common operating systems and prides itself on being easy to learn. This textbook allows you to write and run Python code in your internet browser, but you can learn more about how to install and run Python on your own computer at <a target='_blank' href='https://www.python.org/about/'>python.org</a>.
+Python is a high-level programming language that can run on all common operating systems and prides itself on being easy to learn. This textbook allows you to write and run Python code in your internet browser, but some activities will require you to write Python files on your own computer and submit them for evaluation. You can learn more about how to install and run Python on your own computer at <a target='_blank' href='https://www.python.org/about/'>python.org</a>. The <a href='?chapter=fileio'>File I/O chapter</a> will also help walk you through the process of installing and running Python on your own computer.
 </p>
 
 <p>

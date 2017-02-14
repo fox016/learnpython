@@ -60,7 +60,7 @@ Use the exercise below to play with these operations. Change the values of x and
 <h2>Being Careful with Types</h2>
 
 <p>
-For some versions of Python and for most programming languages, the types of the <em>operands</em> (the numbers operated on in math operations) will determine the type of the resulting value. For example, many programing languages will evaluate <code>12 / 5</code> as <code>2</code> instead of <code>2.4</code>. Why? Because <code>12</code> is an integer and <code>5</code> is an integer, so <code>12 / 5</code> returns an integer, <code>2</code>. If you know you want the output of a math operation to be a float, then it is a good idea to make at least one of the operands a float. For example, <code>12.0 / 5.0</code> will evaluate to <code>2.4</code>, as will <code>12.0 / 5</code> or <code>12 / 5.0</code>.
+For some versions of Python and for most programming languages, the types of the <em>operands</em> (the numbers operated on in math operations) will determine the type of the resulting value. For example, many programing languages will evaluate <code>12 / 5</code> as <code>2</code> instead of <code>2.4</code>. Why? Because <code>12</code> is an integer and <code>5</code> is an integer, so the computer thinks that an operation with only integers (such as <code>12 / 5</code>) should result in an integer, in this case <code>2</code>. If you know you want the output of a math operation to be a float, then it is a good idea to make at least one of the operands a float. For example, <code>12.0 / 5.0</code> will evaluate to <code>2.4</code>, as will <code>12.0 / 5</code> or <code>12 / 5.0</code>. When at least one operand is a float, the computer knows that the result may have a decimal value, so the computer automatically makes the result a float so that the decimal isn't lost.
 </p>
 
 <h2>Mathematical Equations</h2>
@@ -104,4 +104,34 @@ Using number types and operations, you can code a mathematical <em>equation</em>
 		cost_ratio2 = cost2 / area2
 		print("Size: " + str(diameter2) + " in, Cost: $" + str(cost2) + ", Cost per square inch: $" + str(cost_ratio2))
 	</code>
+</div>
+
+<p>
+Now that you have seen some examples of writing equations, it's time to do one on your own! Use the coding practice below to write an equation that converts a Fahrenheit temperature to a Celsius temperature. Use the following formula:
+</p>
+<p>
+C = (5/9)(F - 32)
+</p>
+<p>
+Where C is degrees Celsius and F is degrees Fahrenheit. First subtract 32 from the Fahrenheit value, then multiply the result by the fraction 5/9.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		f = 95
+		
+		# Change this line:
+		c = f
+
+		# Print solution
+		print("F: " + str(f) + ", C: " + str(c))
+	</code>
+	<code data-type="solution">
+		f = 95
+		c = (5.0/9.0) * (f - 32)
+		print("F: " + str(f) + ", C: " + str(c))
+	</code>
+	<div data-type="hint">
+		<code>c = (5.0/9.0) * (f - 32)</code>
+	</div>
 </div>

@@ -40,17 +40,23 @@ Python is a high-level programming language that can run on all common operating
 </p>
 
 <p>
-One of the goals of the Python programming language is to define intuitive syntax that makes it more human-readable. For example, to print text to the screen, the command is simply <code>print</code>. Use the space below to play with the <code>print</code> function to print text to the output window. Click "Run" to see how the example works.
+One of the goals of the Python programming language is to define intuitive syntax that makes it more human-readable. For example, to print text to the screen, the command is simply <code>print</code>. Commands like this are known as <em>functions</em>. Functions take some kind of input and produce output. The <code>print</code> function takes a string of text wrapped in quotation marks as input, then prints that text to the screen.
+</p>
+
+<p>
+Use the space below to play with the <code>print</code> function to print text to the output window. Click "Run" to see how the example works.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="pre-exercise-code">
 	</code>
 	<code data-type="sample-code">
+		# Print strings of text to the screen
 		print("Hello, world!")	
 		print("Python is fun and easy to learn!")
 	</code>
 	<code data-type="solution">
+		# Print strings of text to the screen
 		print("Hello, world!")	
 		print("Python is fun and easy to learn!")
 	</code>
@@ -60,4 +66,28 @@ One of the goals of the Python programming language is to define intuitive synta
 	<div data-type="hint">
 		Use the <code>print</code> function to print text to the screen. Use the format <code>print("<em>Enter text here</em>")</code>.
 	</div>
+</div>
+
+<h2>Comments in Code</h2>
+
+<p>
+In the example above, you'll notice the green text that says <code># Print strings of text to the screen</code>. That line is a <em>comment</em>. Comments are not seen by the computer. They are not commands, and they are not translated into binary for the computer to run. Comments are just for programmers to see; they are notes that a programmer writes about the code. Comments are often used to briefly describe what the code is doing so that when you come back to look at your code later, you can easily find the code you need to and have a basic understanding of what it's supposed to be doing.
+</p>
+
+<p>
+In Python, single-line quotes start with <code>#</code>. That tells the computer that everything following <code>#</code> on this line is a comment and the computer should ignore it. For comments that take up multiple lines, use <code>"""</code> at both the beginning and the end of the comment.
+</p>
+
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		# Print a greeting 
+		print("Hello, world!")	
+
+		"""
+		Print something funny, perhaps something from a classic book
+		or one of your favorite movies
+		"""
+		print("Everything is funny, as long as it's happening to somebody else")
+	</code>
 </div>

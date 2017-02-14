@@ -76,35 +76,20 @@ As previously mentioned, common types of variable values include numbers, string
 	<code data-type="pre-exercise-code">
 	</code>
 	<code data-type="sample-code">
-		my_int = 1
-		my_float = 1.0
-		my_str = "1"
+		var1 = 1
+		var2 = 1.0
+		var3 = "1"
 
 		# Print each variable type
-		print(type(my_int))
-		print(type(my_float))
-		print(type(my_str))
-	</code>
-	<code data-type="solution">
-		my_int = 1
-		my_float = 1.0
-		my_str = "1"
+		print(type(var1))
+		print(type(var2))
+		print(type(var3))
 
-		# Print each variable type
-		print(type(my_int))
-		print(type(my_float))
-		print(type(my_str))
+		# Print a sentence for each variable value and type
+		print("var1 has a value of " + str(var1) + " and is of type " + str(type(var1)))
+		print("var2 has a value of " + str(var2) + " and is of type " + str(type(var2)))
+		print("var3 has a value of \"" + str(var3) + "\" and is of type " + str(type(var3)))
 	</code>
-	<code data-type="sct">
-		test_object("my_int")
-		test_object("my_float")
-		test_object("my_str")
-		test_function("print")
-		success_msg("Process complete")
-	</code>
-	<div data-type="hint">
-		Just click "Run"
-	</div>
 </div>
 
 <p>

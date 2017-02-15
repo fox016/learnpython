@@ -3,6 +3,8 @@
 <head>
 	<title>Python Explorer</title>
 
+	<meta name='google-signin-client_id' content='784403148714-c2dotmflmj5ps6crteomonmqcs6osj01.apps.googleusercontent.com'>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 	<script src="js/common.js"></script>

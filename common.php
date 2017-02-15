@@ -1,6 +1,6 @@
 <?php
 
-require_once("./classes/chapter.php");
+require_once(__DIR__ . "/classes/chapter.php");
 $currentPage = NULL;
 
 /*
@@ -79,8 +79,11 @@ function showChallengeSet($challengeSetId)
 {
 	global $currentPage;
 	$currentPage = "challenge_set_$challengeSetId";
+	$userid = checkLogin();
 
 	if($challengeSetId == "0")
+	{
+	}
 
 	echo "TODO show challenge set $challengeSetId";
 }
@@ -90,6 +93,10 @@ function showChallengeSet($challengeSetId)
  */
 function showChallenge($challengeId)
 {
+	global $currentPage;
+	$currentPage = "challenge_$challengeId";
+	$userid = checkLogin();
+
 	echo "TODO show challenge $challengeId";
 }
 
@@ -100,7 +107,31 @@ function showHome()
 {
 	global $currentPage;
 	$currentPage = "home";
-	require_once('html/home.php');
+	include_once('html/home.php');
+}
+
+/*
+ * Show login page
+ */
+function showLogin()
+{
+	global $currentPage;
+	include_once('html/login.php');
+	include_once('html/footer.php');
+	die;
+}
+
+/*
+ * Check login
+ * If not logged in, build login screen (no return)
+ * Else, return userid
+ */
+function checkLogin()
+{
+	$userid = getCookie('userid');
+	if($userid === null)
+		showLogin();
+	return $userid;
 }
 
 /*
@@ -108,7 +139,7 @@ function showHome()
  */
 function buildCookie($name, $value)
 {
-	require_once('../util/util-security.php');
+	require_once(__DIR__ . "/../util/util-security.php");
 
         $key = pack('H*', AES_128_KEY);
         $alpha = "0123456789abcdef";
@@ -117,8 +148,11 @@ function buildCookie($name, $value)
                 $iv .= $alpha[rand(0, strlen($alpha)-1)];
         $ciphertext = openssl_encrypt($value, "aes128", $key, 0, $iv);
         $ciphertext = base64_encode($iv . $ciphertext);
-	
-	setcookie($name, $ciphertext, time() + (24 * 60 * 60));
+
+	$expireTime = time() + (24 * 60 * 60);
+	$cookie = array("name" => $name, "value" => $ciphertext, "expires" => $expireTime);
+	setcookie($cookie['name'], $cookie['value'], $cookie['expires']);
+	return $cookie;
 }
 
 /*
@@ -126,7 +160,7 @@ function buildCookie($name, $value)
  */
 function getCookie($name)
 {
-	require_once('../util/util-security.php');
+	require_once(__DIR__ . "/../util/util-security.php");
 
 	if(!isset($_COOKIE[$name]))
 		return null;

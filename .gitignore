@@ -1,1 +1,4 @@
 error_log
+composer.json
+composer.lock
+vendor/

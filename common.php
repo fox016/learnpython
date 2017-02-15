@@ -77,6 +77,11 @@ function showChapter($chapterId)
  */
 function showChallengeSet($challengeSetId)
 {
+	global $currentPage;
+	$currentPage = "challenge_set_$challengeSetId";
+
+	if($challengeSetId == "0")
+
 	echo "TODO show challenge set $challengeSetId";
 }
 
@@ -96,4 +101,40 @@ function showHome()
 	global $currentPage;
 	$currentPage = "home";
 	require_once('html/home.php');
+}
+
+/*
+ * Build encrypted cookie
+ */
+function buildCookie($name, $value)
+{
+	require_once('../util/util-security.php');
+
+        $key = pack('H*', AES_128_KEY);
+        $alpha = "0123456789abcdef";
+        $iv = "";
+        for($i = 0; $i < 16; $i++)
+                $iv .= $alpha[rand(0, strlen($alpha)-1)];
+        $ciphertext = openssl_encrypt($value, "aes128", $key, 0, $iv);
+        $ciphertext = base64_encode($iv . $ciphertext);
+	
+	setcookie($name, $ciphertext, time() + (24 * 60 * 60));
+}
+
+/*
+ * Get decrypted cookie value
+ */
+function getCookie($name)
+{
+	require_once('../util/util-security.php');
+
+	if(!isset($_COOKIE[$name]))
+		return null;
+
+	$ciphertext = base64_decode($_COOKIE[$name]);
+        $key = pack('H*', AES_128_KEY);
+        $iv = substr($ciphertext, 0, 16);
+        $ciphertext = substr($ciphertext, 16);
+        $value = openssl_decrypt($ciphertext, "aes128", $key, 0, $iv);
+	return $value;
 }

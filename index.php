@@ -2,12 +2,16 @@
 
 try
 {
+	// Include common functions and global vars
 	require_once('common.php');
 
+	// Initiate chapter list
 	buildChapterList();
 
+	// Include HTML header and nav bar
 	include_once('html/header.php');
 
+	// Dynamic content
 	if(isset($_REQUEST['chapter']))
 		showChapter($_REQUEST['chapter']);
 	else if(isset($_REQUEST['challengeSet']))
@@ -17,6 +21,7 @@ try
 	else
 		showHome();
 
+	// Close tags from HTML header
 	include_once('html/footer.php');
 }
 catch(Exception $e)

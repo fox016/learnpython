@@ -79,13 +79,17 @@ function showChallengeSet($challengeSetId)
 {
 	global $currentPage;
 	$currentPage = "challenge_set_$challengeSetId";
-	$userid = checkLogin();
+	//$userid = checkLogin();
+
+	include_once("html/challengeCommon.php");
 
 	if($challengeSetId == "0")
 	{
 	}
 
-	echo "TODO show challenge set $challengeSetId";
+	//echo "TODO show challenge set $challengeSetId";
+
+	include_once("html/challengeSets/" . $challengeSetId . ".php"); // TODO mock
 }
 
 /*
@@ -95,9 +99,14 @@ function showChallenge($challengeId)
 {
 	global $currentPage;
 	$currentPage = "challenge_$challengeId";
-	$userid = checkLogin();
+	//$userid = checkLogin();
 
-	echo "TODO show challenge $challengeId";
+	include_once("html/challengeCommon.php");
+
+	//echo "TODO show challenge $challengeId";
+
+	$currentPage = "challenge_set_math"; // TODO mock
+	include_once("html/challenge/" . $challengeId . ".php"); // TODO mock
 }
 
 /*

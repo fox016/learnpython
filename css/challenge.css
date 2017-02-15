@@ -1,0 +1,32 @@
+#loginWrapper {
+	text-align:center;
+}
+#loginWrapper div {
+	margin:0px auto;
+}
+.greencheck {
+	width:20px;
+}
+#challengeSetTable {
+	border-collapse:collapse;
+	border:1px solid #333;
+}
+#challengeSetTable th {
+	border:1px solid #369;
+	padding:3px 20px 3px 10px;
+	background-color:#369;
+	color:white;
+	text-align:left;
+	font-style:italic;
+	font-weight:lighter;
+	font-size:0.9em;
+}
+#challengeSetTable td {
+	border:1px solid #333;
+	padding:3px 20px 3px 10px;
+	font-size:0.8em;
+}
+#challengeSetTable tr:hover {
+	background-color:#fdfade;
+	cursor:pointer;
+}

@@ -12,8 +12,8 @@ try
 	if($payload)
 	{
 		$userid = $payload['sub'];
-		$cookie = buildCookie('userid', $userid);
-		echo json_encode($cookie);
+		//$cookie = buildCookie('userid', $userid);
+		//echo json_encode($cookie);
 	}
 	else
 		throw new Exception("Invalid Google token");

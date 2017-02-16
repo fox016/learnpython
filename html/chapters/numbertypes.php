@@ -110,7 +110,7 @@ Using number types and operations, you can code a mathematical <em>equation</em>
 Now that you have seen some examples of writing equations, it's time to do one on your own! Use the coding practice below to write an equation that converts a Fahrenheit temperature to a Celsius temperature. Use the following formula:
 </p>
 <p>
-C = (5/9)(F - 32)
+<img src='images/temp_conv.png' style='max-width:125px'>
 </p>
 <p>
 Where C is degrees Celsius and F is degrees Fahrenheit. First subtract 32 from the Fahrenheit value, then multiply the result by the fraction 5/9.

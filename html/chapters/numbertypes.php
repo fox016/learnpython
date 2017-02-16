@@ -32,9 +32,11 @@ Use the exercise below to play with these operations. Change the values of x and
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
+		# Change the values of x and y
 		x = 19
 		y = 5
 
+		# This code performs the operations
 		num_sum = x + y
 		diff = x - y
 		prod = x * y
@@ -44,6 +46,7 @@ Use the exercise below to play with these operations. Change the values of x and
 		abs_val = abs(x)
 		exp = x ** y
 
+		# This prints all the results
 		print("")
 		print("x = " + str(x) + ", y = " + str(y))
 		print(str(x) + " + " + str(y) + " = " + str(num_sum))
@@ -72,24 +75,24 @@ Using number types and operations, you can code a mathematical <em>equation</em>
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
 		# Area of a circle
-		radius = 2.5
+		radius = 2.5 # You can change the radius
 		pi = 3.14159
 		area = pi * (radius ** 2)
 		print("Radius: " + str(radius) + " m, Area: " + str(area) + " m^2")
 		
 		# Celsius to Fahrenheit converter
-		celsius = 35.0
+		celsius = 35.0 # You can change the celsius value
 		fahrenheit = (9/5.0) * celsius + 32
 		print("Celsius: " + str(celsius) + ", Fahrenheit: " + str(fahrenheit))
 
-		# Calculate distance
+		# Calculate distance (you can change the first 3 values)
 		velocity_start = 2.0 # meters per second
 		time = 10.0 # seconds
 		acceleration = 1.5 # meters per second per second
 		distance = (velocity_start * time) + (0.5 * acceleration * (time**2))
 		print("Distance travelled: " + str(distance) + " meters")
 
-		# Compare price per square inch of two pizzas
+		# Compare price per square inch of two pizzas (you can change diameter and cost)
 		diameter1 = 12.0 # inches
 		radius1 = diameter1 / 2.0
 		cost1 = 5.00 # dollars
@@ -118,9 +121,10 @@ Where C is degrees Celsius and F is degrees Fahrenheit. First subtract 32 from t
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
+		# You can change the Fahrenheit input value
 		f = 95
 		
-		# Change this line:
+		# Change this line to match the conversion equation:
 		c = f
 
 		# Print solution

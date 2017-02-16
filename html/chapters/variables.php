@@ -91,6 +91,7 @@ As previously mentioned, common types of variable values include numbers, string
 		print(type(var4))
 
 		# Print a sentence for each variable value and type
+		# Don't mess with this code or worry about understanding it, it's just here to give you nice output
 		print("var1 has a value of " + str(var1) + " and is of type " + str(type(var1)))
 		print("var2 has a value of " + str(var2) + " and is of type " + str(type(var2)))
 		print("var3 has a value of \"" + str(var3) + "\" and is of type " + str(type(var3)))

@@ -1,10 +1,13 @@
 <p>
-As stated in the previous chapter, coding is writing commands for a computer to execute. Computers carry out commands by writing data to memory, reading data from memory, and performing calculations on that data. Programmers can tell a computer to write data to memory by defining <em>variables</em>. A variable is a name that is tied to a value that can be changed (hence the term "variable"&mdash;the value can vary). Common types of values include numbers (e.g., 42, 3.14159), strings of text (e.g., "Hello, world!", "Python is fun and easy to learn!"), and booleans (i.e. True or False). Python assigns values to variable names using the following syntax:
+As stated in the previous chapter, coding is writing commands for a computer to execute. Computers carry out commands by writing data to memory, reading data from memory, and performing calculations on that data. Programmers can tell a computer to write data to memory by defining <em>variables</em>. A variable is a name that is tied to a value. For example, the code <code>temperature = 32</code> assigns the number value <code>32</code> to the variable name <code>temperature</code>. Then you can use the variable name <code>temperature</code> throughout your code and it will be evaluated as the number value <code>32</code>. There are many types of values that can be assigned to variables. Common types of values include numbers (e.g., <code>42</code>, <code>3.14159</code>), strings of text (e.g., <code>"Hello, world!"</code>, <code>"Python is fun and easy to learn!"</code>), and booleans (<code>True</code> or <code>False</code>). Python assigns values to variable names using the following syntax:
 </p>
 <p>
 	<code>my_num = 42</code><br/>
 	<code>my_str = "Hello, world!"</code><br/>
 	<code>my_bool = True</code><br/>
+</p>
+<p>
+Use the exercise below to assing values to variable names. Read the comments in the provided code to see what values you should assign to each variable name.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -63,37 +66,57 @@ In the first example above, the name of the variable is "my_num" (short for "my 
 	<li>Names are case-sensitive (e.g., "my_Num" and "my_num" are different variables)</li>
 </ul>
 <p>
-Notice that variable names cannot contain spaces. For example, <code>employee age = 42</code> is not valid. To make variable names that are made of multiple words, programmers can use underscores (e.g., <code>employee_age = 42</code>) or camel case (e.g., <code>employeeAge = 42</code>). Python style guides suggest using underscores to separate chunks of multi-word variable names, but some other languages suggest camel case.
+Notice that variable names cannot contain spaces. For example, <code>employee age = 42</code> is <strong>not</strong> valid. To make variable names that are made of multiple words, programmers can use underscores (e.g., <code>employee_age = 42</code>) or camel case (e.g., <code>employeeAge = 42</code>). Python style guides suggest using underscores to separate chunks of multi-word variable names, but some other languages suggest camel case.
 </p>
 
 <h2>Variable Types</h2>
 
 <p>
-As previously mentioned, common types of variable values include numbers, strings, and booleans. Numbers are divided into different types, the two most common types being int and float. An int is an integer, which is a whole number without a decimal (e.g., -40, 0, 42, 28308732). A float is a decimal floating-point number, which is any number with a decimal (e.g., 3.14159, -43.2, 1.0, 0.0). In Python, passing a variable name into the <code>type</code> function will return the type of the value the variable is currently storing.
+As previously mentioned, common types of variable values include numbers, strings, and booleans. Numbers are divided into different types, the two most common types being int and float. An int is an integer, which is a whole number without a decimal (e.g., <code>-40</code>, <code>0</code>, <code>42</code>, <code>28308732</code>). A float is a decimal floating-point number, which is any number with a decimal (e.g., <code>3.14159</code>, <code>-43.2</code>, <code>1.0</code>, <code>0.0</code>). In Python, passing a variable name into the <code>type</code> function will return the type of the value the variable is currently storing.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="pre-exercise-code">
 	</code>
 	<code data-type="sample-code">
-		var1 = 1
-		var2 = 1.0
-		var3 = "1"
+		var1 = 1 # integer ('int')
+		var2 = 1.0 # float
+		var3 = "1" # string ('str')
+		var4 = True # boolean ('bool') 
 
 		# Print each variable type
 		print(type(var1))
 		print(type(var2))
 		print(type(var3))
+		print(type(var4))
 
 		# Print a sentence for each variable value and type
 		print("var1 has a value of " + str(var1) + " and is of type " + str(type(var1)))
 		print("var2 has a value of " + str(var2) + " and is of type " + str(type(var2)))
 		print("var3 has a value of \"" + str(var3) + "\" and is of type " + str(type(var3)))
+		print("var4 has a value of " + str(var4) + " and is of type " + str(type(var4)))
 	</code>
 </div>
 
 <p>
-Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string "42" is different than the integer 42, and both are different than the float 42.0. Similarly, the boolean False is different than the string "False". The following chapters will illustrate how the computer treats different variable types differently and what you as the programmer can do with different variable types.
+Numbers, strings, and booleans all behave differently, so it's important to know the difference. For example, the string <code>"42"</code> is different than the integer <code>42</code>, and both are different than the float <code>42.0</code>. Similarly, the boolean <code>False</code> is different than the string <code>"False"</code>. The following chapters will illustrate how the computer treats different variable types differently and what you as the programmer can do with different variable types.
+</p>
+
+<h2>Review</h2>
+
+<p>
+Define integers using the following syntax: <code>int_name = 10</code><br/>
+Define floats using the following syntax: <code>float_name = 10.0</code><br/>
+Define strings using the following syntax: <code>str_name = "my string could beat up your string"</code><br/>
+Define booleans using the following syntax: <code>bool_name = True</code><br/>
+</p>
+<p>
+Print variable values using the following syntax: <code>print(<em>variable_name</em>)</code><br/>
+Print variable types using the following syntax: <code>print(type(<em>variable_name</em>))</code><br/>
+</p>
+
+<p>
+Use the exercise below to put all your newfound knowledge to the test!
 </p>
 
 <div data-datacamp-exercise data-lang="python">

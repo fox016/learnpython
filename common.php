@@ -79,15 +79,14 @@ function showChallengeSet($challengeSetId)
 {
 	global $currentPage;
 	$currentPage = "challenge_set_$challengeSetId";
-	//$userid = checkLogin();
-
 	include_once("html/challengeCommon.php");
+	$userid = checkLogin();
 
 	if($challengeSetId == "0")
 	{
+		echo "TODO show challenge set $challengeSetId";
+		return;	
 	}
-
-	//echo "TODO show challenge set $challengeSetId";
 
 	include_once("html/challengeSets/" . $challengeSetId . ".php"); // TODO mock
 }
@@ -99,11 +98,10 @@ function showChallenge($challengeId)
 {
 	global $currentPage;
 	$currentPage = "challenge_$challengeId";
-	//$userid = checkLogin();
-
 	include_once("html/challengeCommon.php");
+	$userid = checkLogin();
 
-	//echo "TODO show challenge $challengeId";
+	echo "TODO show challenge $challengeId";
 
 	$currentPage = "challenge_set_math"; // TODO mock
 	include_once("html/challenge/" . $challengeId . ".php"); // TODO mock
@@ -120,17 +118,6 @@ function showHome()
 }
 
 /*
- * Show login page
- */
-function showLogin()
-{
-	global $currentPage;
-	include_once('html/login.php');
-	include_once('html/footer.php');
-	die;
-}
-
-/*
  * Check login
  * If not logged in, build login screen (no return)
  * Else, return userid
@@ -138,8 +125,12 @@ function showLogin()
 function checkLogin()
 {
 	$userid = getCookie('userid');
+	include_once('html/login.php');
 	if($userid === null)
-		showLogin();
+	{
+		include_once('html/footer.php');
+		die;
+	}
 	return $userid;
 }
 
@@ -160,7 +151,7 @@ function buildCookie($name, $value)
 
 	$expireTime = time() + (24 * 60 * 60);
 	$cookie = array("name" => $name, "value" => $ciphertext, "expires" => $expireTime);
-	setcookie($cookie['name'], $cookie['value'], $cookie['expires']);
+	setcookie($cookie['name'], $cookie['value'], $cookie['expires'], "/");
 	return $cookie;
 }
 

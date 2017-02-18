@@ -1,4 +1,9 @@
 /*
+ * Globals
+ */
+var current_user = null; // Object holding current_user data from Google
+
+/*
  * Init page
  */
 $(document).ready(function()
@@ -50,15 +55,19 @@ function sideBarResize()
 function googleSignIn(googleUser)
 {
 	var id_token = googleUser.getAuthResponse().id_token;
+	setCurrentUser(googleUser.getBasicProfile())
+
+	var userid = getCookie('userid');
+	if(userid !== null)
+		return;
 
 	$.ajax({
 		type: "POST",
 		dataType: "json",
 		url: "ajax/googleSignIn.php",
 		data: {id_token: id_token},
-		success: function(response) {
-			var expire = new Date(parseInt(response['expires']) * 1000);
-			document.cookie = response['name'] + "=" + response['value'] + "; expires=" + expire.toUTCString();
+		success: function(response)
+		{
 			location.reload();
 		},
 		error: function(xhr) {
@@ -72,23 +81,51 @@ function googleSignIn(googleUser)
  */
 function googleSignOut()
 {
-	if(typeof gapi !== "undefined" && typeof gapi.auth2 !== "undefined")
-	{
-		var auth2 = gapi.auth2.getAuthInstance();
-		auth2.signOut().then(signOut)
-	}
-	else
-	{
-		signOut();
-	}
+	deleteCookie('userid');
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function() { location.reload(); });
 }
 
 /*
- * Sign out by deleting cookie
+ * Set current user from google basic profile object
  */
-function signOut()
+function setCurrentUser(profile)
+{
+	current_user = {};
+	current_user.id = profile.getId();
+	current_user.name = profile.getName();
+	current_user.first_name = profile.getGivenName();
+	current_user.last_name = profile.getFamilyName();
+	current_user.image_url = profile.getImageUrl();
+	current_user.email = profile.getEmail();
+}
+
+/*
+ * Get cookie value by name
+ * Return null if not found
+ */
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+		    c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			    return c.substring(name.length, c.length);
+		}
+	}
+	return null;
+}
+
+/*
+ * Delete cookie by name
+ */
+function deleteCookie(cname)
 {
 	var expire = new Date(1000);
-	document.cookie = "userid=null; expires=" + expire.toUTCString();
-	location.reload();
+	document.cookie = cname + "=null; expires=" + expire.toUTCString() + ";path=/";
 }

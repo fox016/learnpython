@@ -79,7 +79,6 @@ function showChallengeSet($challengeSetId)
 {
 	global $currentPage;
 	$currentPage = "challenge_set_$challengeSetId";
-	include_once("html/challengeCommon.php");
 	$userid = checkLogin();
 
 	if($challengeSetId == "0")
@@ -98,7 +97,6 @@ function showChallenge($challengeId)
 {
 	global $currentPage;
 	$currentPage = "challenge_$challengeId";
-	include_once("html/challengeCommon.php");
 	$userid = checkLogin();
 
 	echo "TODO show challenge $challengeId";

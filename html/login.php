@@ -1,3 +1,4 @@
+<link rel='stylesheet' type='text/css' href='css/challenge.css' />
 
 <div id='loginWrapper' <?php if(isset($userid)) { ?> style='display:none !important;' <?php } ?>>
 	<p>

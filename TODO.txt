@@ -1,0 +1,7 @@
+TODO
+
+- Coding Challenge Intro screen
+- Architect data for challenges and challenge sets (DB)
+- Challenge set UI
+- Challenge UI
+- Challenge backend

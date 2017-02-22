@@ -98,6 +98,9 @@ function setCurrentUser(profile)
 	current_user.last_name = profile.getFamilyName();
 	current_user.image_url = profile.getImageUrl();
 	current_user.email = profile.getEmail();
+
+	$("#displayUserImage").attr('src', current_user.image_url);
+	$("#displayUserName").html(current_user.first_name);
 }
 
 /*

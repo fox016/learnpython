@@ -42,7 +42,7 @@ function showChapter($chapterId)
 	// Textbook opener
 	if($chapterId == "0")
 	{
-		include("html/chapters/0.php");
+		include("html/chapters/index.php");
 		return;
 	}
 
@@ -83,11 +83,15 @@ function showChallengeSet($challengeSetId)
 
 	if($challengeSetId == "0")
 	{
-		echo "TODO show challenge set $challengeSetId";
-		return;	
+		include("html/challengeSets/index.php");
+		return;
 	}
 
-	include_once("html/challengeSets/" . $challengeSetId . ".php"); // TODO mock
+	$file = "html/challengeSets/{$challengeSetId}.php";
+	if(file_exists($file))
+		include_once($file);
+	else
+		echo "Challenge set $challengeSetId not found";
 }
 
 /*

@@ -1,7 +1,10 @@
 TODO
 
-- Coding Challenge Intro screen
 - Architect data for challenges and challenge sets (DB)
+--- Create DBO to interact with challenge_sets table
+--- Populate challenge set nav with data
+--- Populate challenge set table on intro screen with data
 - Challenge set UI
 - Challenge UI
 - Challenge backend
+- 3 Challenges

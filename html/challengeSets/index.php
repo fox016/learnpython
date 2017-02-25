@@ -1,3 +1,8 @@
+<?php
+
+$challengeSets = getChallengeSets();
+
+?>
 <h1>Coding Challenges</h1>
 <p>
 Coding challenges are more complex than the coding simulations in the textbook. They require an integration of knowledge and test your ability to break down and solve problems.
@@ -9,3 +14,9 @@ Challenges are divided into challenge sets. The math challenge set, for example,
 <p>
 List of (and links to) challenge sets TODO
 </p>
+<?php
+foreach($challengeSets as $i => $set)
+{
+	echo json_encode($set) . "<br/>"; // TODO
+}
+?>

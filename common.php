@@ -174,3 +174,13 @@ function getCookie($name)
         $value = openssl_decrypt($ciphertext, "aes128", $key, 0, $iv);
 	return $value;
 }
+
+/*
+ * Get list of challenge sets
+ */
+function getChallengeSets()
+{
+	require_once(__DIR__ . "/db/DBchallenges.php");
+	$db = new DBchallenges();
+	return $db->getChallengeSets();
+}

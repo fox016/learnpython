@@ -59,7 +59,8 @@ function googleSignIn(googleUser)
 	var cookies = hasCookies();
 	if(!cookies)
 	{
-		myAlert("");
+		myAlert("You must enable cookies for the coding challenges to work." +
+			"Change your browser settings to allow local cookies and third party cookies.");
 		return;
 	}
 

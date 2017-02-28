@@ -30,6 +30,7 @@ function myAlert(str)
 		resizable: true,
 		modal: true,
 		height: 200,
+		width: 450,
 		open: function() {
 		},
 		close: function()
@@ -44,16 +45,7 @@ function myAlert(str)
 			}
 		},
 		buttons:
-		[
-			{
-				text: "Close",
-				id: "closeBtn",
-				click: function()
-				{
-					$(this).dialog("close");
-				},
-			},
-		],
+			[{ text: "Close", id: "closeBtn", click: function() { $(this).dialog("close"); }}],
 	});
 }
 

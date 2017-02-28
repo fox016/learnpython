@@ -90,11 +90,19 @@ function showChallengeSet($challengeSetId)
 		return;
 	}
 
-	$file = "html/challengeSets/{$challengeSetId}.php";
-	if(file_exists($file))
-		include_once($file);
+	require_once(__DIR__ . "/db/DBchallenges.php");
+	$db = new DBchallenges();
+	$set = $db->getChallengeSet($challengeSetId);
+
+	if($set === FALSE)
+	{
+		echo "Challenge set id ($challengeSetId) not found";
+	}
 	else
-		echo "Challenge set $challengeSetId not found";
+	{
+		echo "<h2>{$set['name']}</h2><p>{$set['description']}</p>";
+		// TODO show challenges in challenge set
+	}
 }
 
 /*

@@ -1,9 +1,12 @@
 TODO
 
-- Architect data for challenges and challenge sets (DB)
---- Populate challenge set nav with data
---- Populate challenge set table on intro screen with data
 - Challenge set UI
+	- DB challenge table (id, name, position, parent set, instructions)
+	- DB user challenge table (user id, challenge id, completed date time)
+	- All generated from DB
 - Challenge UI
+	- All generated from DB
 - Challenge backend
+	- Save/load user completed date
 - 3 Challenges
+- Challenge Forums

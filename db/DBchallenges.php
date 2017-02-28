@@ -29,4 +29,12 @@ class DBchallenges
 		$success = $stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+	public function getChallengeSet($id)
+	{
+		$sql = "SELECT * FROM challenge_sets WHERE id=?";
+		$stmt = $this->dbh->prepare($sql);
+		$succcess = $stmt->execute(array($id));
+		return $stmt->fetch(PDO::FETCH_ASSOC);
+	}
 }

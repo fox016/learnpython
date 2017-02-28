@@ -44,7 +44,11 @@
 							echo "<a href='/learnpython/?chapter={$chapter->id}'><div id='link_chapter_{$chapter->id}' class='navlink sublink'>Chapter " . ($index+1) . " - {$chapter->name}</div></a>\n";
 					?>
 					<a href='/learnpython/?challengeSet=0'><div id='link_challenge_set_0' class='navlink'>Coding Challenges</div></a>
-					<a href='/learnpython/?challengeSet=math'><div id='link_challenge_set_math' class='navlink sublink'>Math Challenges</div></a>
+					<?php
+						$challengeSets = getChallengeSets();
+						foreach($challengeSets as $i => $set)
+							echo "<a href='/learnpython/?challengeSet={$set['id']}'><div id='link_challenge_set_{$set['id']}' class='navlink sublink'>{$set['name']}</div></a>";
+					?>
 				</div>
 			</div>
 			<div class='cell top' id='pageContentParent'>

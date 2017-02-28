@@ -14,7 +14,7 @@
 <!-- If not signed in -->
 <div id='loginWrapper' <?php if(isset($userid)) { ?> style='display:none !important;' <?php } ?>>
 	<p>
-	Sign in with your Google account to start working on Coding Challenges
+	Sign in with your Google account to start working on Coding Challenges.<br/>Local cookies and third-party cookies must be <strong>enabled</strong> in your browser.
 	</p>
 	<div class="g-signin2" data-onsuccess="googleSignIn"></div>
 </div>

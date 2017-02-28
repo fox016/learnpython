@@ -8,6 +8,8 @@ var current_user = null; // Object holding current_user data from Google
  */
 $(document).ready(function()
 {
+	initMyAlert("Python Explorer Alert");
+
 	$(window).resize(sideBarResize).trigger('resize');
 
 	$("#link_" + $("#currentPage").val()).addClass('selected');
@@ -54,6 +56,13 @@ function sideBarResize()
  */
 function googleSignIn(googleUser)
 {
+	var cookies = hasCookies();
+	if(!cookies)
+	{
+		myAlert("");
+		return;
+	}
+
 	var id_token = googleUser.getAuthResponse().id_token;
 	setCurrentUser(googleUser.getBasicProfile())
 
@@ -131,4 +140,22 @@ function deleteCookie(cname)
 {
 	var expire = new Date(1000);
 	document.cookie = cname + "=null; expires=" + expire.toUTCString() + ";path=/";
+}
+
+/*
+ * @return false if cookies are disabled
+ */
+function hasCookies()
+{
+	var enabled = navigator.cookieEnabled;
+	if(!enabled)
+		return false;
+	if(!document.cookie && (enabled === null || /*@cc_on!@*/ false))
+	{
+		document.cookie = "testcookie=1";
+		if(!document.cookie)
+			return false;
+		deleteCookie("testcookie");
+	}
+	return true;
 }

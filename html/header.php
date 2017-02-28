@@ -7,6 +7,7 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+	<script src="js/myAlert.js"></script>
 	<script src="js/common.js"></script>
 
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />

@@ -92,7 +92,7 @@ function showChallengeSet($challengeSetId)
 
 	require_once(__DIR__ . "/db/DBchallenges.php");
 	$db = new DBchallenges();
-	$set = $db->getChallengeSet($challengeSetId);
+	$set = $db->getChallengeSet($challengeSetId, $userid);
 
 	if($set === FALSE)
 	{
@@ -100,8 +100,33 @@ function showChallengeSet($challengeSetId)
 	}
 	else
 	{
-		echo "<h2>{$set['name']}</h2><p>{$set['description']}</p>";
-		// TODO show challenges in challenge set
+		?>
+		<h2><?php echo $set['name'];?></h2>
+		<p><?php echo $set['description'];?></p>
+		<table id='challengeSetTable'>
+			<thead>
+				<tr><th>Challenge Name</th><th>Difficulty</th><th>Completed</th><th>Forum</th></tr>
+			</thead>
+			<tbody>
+				<?php
+				foreach($set['challenges'] as $i => $challenge)
+				{
+					?>
+					<tr>
+						<td><a href='/learnpython/?challenge=<?php echo $challenge['id'];?>'><?php echo $challenge['name'];?></a></td>
+						<td><?php echo getDifficulty($challenge['difficulty']);?></td>
+					<?php if($challenge['completed_date_time'] === null) { ?>
+						<td></td>
+						<td></td>
+					<?php } else { ?>
+						<td><?php echo formatDate($challenge['completed_date_time']);?></td>
+						<td><a href='/learnpython/?forum=<?php echo $challenge['id'];?>'>Forum</a></td>
+					<?php } ?>
+					</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+		<?php
 	}
 }
 
@@ -145,6 +170,20 @@ function checkLogin()
 		die;
 	}
 	return $userid;
+}
+
+/*
+ * Get difficulty text from int stored in db
+ */
+function getDifficulty($n)
+{
+	switch($n)
+	{
+		case 1: return "Easy";
+		case 2: return "Medium";
+		case 3: return "Hard";
+		default: return "Unknown";
+	}
 }
 
 /*
@@ -194,4 +233,12 @@ function getChallengeSets()
 	require_once(__DIR__ . "/db/DBchallenges.php");
 	$db = new DBchallenges();
 	return $db->getChallengeSets();
+}
+
+/*
+ * Convert date string to given format
+ */
+function formatDate($date, $format="Y-m-d")
+{
+	return date($format, strtotime($date));
 }

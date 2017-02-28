@@ -30,11 +30,25 @@ class DBchallenges
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function getChallengeSet($id)
+	public function getChallengeSet($id, $userid)
 	{
 		$sql = "SELECT * FROM challenge_sets WHERE id=?";
 		$stmt = $this->dbh->prepare($sql);
 		$succcess = $stmt->execute(array($id));
-		return $stmt->fetch(PDO::FETCH_ASSOC);
+		$set = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		if($set === FALSE)
+			return $set;
+
+		$sql = "SELECT challenges.*, user.*
+			FROM challenges
+			LEFT JOIN user_challenges AS user ON user.challenge_id=challenges.id AND user.user_id=?
+			WHERE challenges.challenge_set=?
+			ORDER BY challenges.position ASC";
+		$stmt = $this->dbh->prepare($sql);
+		$succcess = $stmt->execute(array($userid, $id));
+		$set['challenges'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		return $set;
 	}
 }

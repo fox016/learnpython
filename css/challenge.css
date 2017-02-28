@@ -28,7 +28,6 @@
 }
 #challengeSetTable tr:hover {
 	background-color:#fdfade;
-	cursor:pointer;
 }
 #displayUserHeader {
 	background-color:#3774a7;

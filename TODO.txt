@@ -1,9 +1,5 @@
 TODO
 
-- Challenge set UI
-	- DB challenge table (id, name, position, parent set, instructions)
-	- DB user challenge table (user id, challenge id, completed date time)
-	- All generated from DB
 - Challenge UI
 	- All generated from DB
 - Challenge backend

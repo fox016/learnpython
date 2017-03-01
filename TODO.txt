@@ -1,8 +1,23 @@
 TODO
 
 - Challenge UI
-	- All generated from DB
-- Challenge backend
-	- Save/load user completed date
+	- Design UI
+		x Coding area
+		x Description
+		x Difficulty
+		x If solved:
+			x Answer/solution
+			x Completed date
+			x Link to forum
+		- Else:
+			x Form to submit answer
+			- Verify answer
+			- Save user completed date
+	x All generated from DB
 - 3 Challenges
+	x Fibonacci
+	- Cone surface area
+	- Sudoku
 - Challenge Forums
+	- Read
+	- Write

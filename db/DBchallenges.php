@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . "/../../util/util-db.php");
+require_once(__DIR__ . "/../../util/util-logging.php");
 
 class DBchallenges
 {
@@ -75,10 +76,10 @@ class DBchallenges
 
 	public function insertUser($user)
 	{
-		$user = $this->getUser($user['user_id']);
+		$oldUser = $this->getUser($user['user_id']);
 		$now = date("Y-m-d H:i:s");
 		$user['updated_date_time'] = $now;
-		if($user === FALSE)
+		if($oldUser === FALSE)
 		{
 			$user['created_date_time'] = $now;
 			$this->performInsert("users", $user);

@@ -181,7 +181,6 @@ function buildUser($googleUser)
 	require_once(__DIR__ . "/db/DBchallenges.php");
 	$db = new DBchallenges();
 	$rc = $db->insertUser($user);
-	appLog("insert user", LOG_DEBUG, "rc: $rc", __FILE__, __LINE__);
 	$db->commit();
 }
 

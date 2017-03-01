@@ -161,3 +161,30 @@ function hasCookies()
 	}
 	return true;
 }
+
+/*
+ * Submit answer to challenge
+ */
+function submitAnswer(form)
+{
+	var userid = getCookie('userid');
+	if(userid === null)
+	{
+		myAlert("You cannot submit an answer without logging in");
+		return false;
+	}
+
+	$.ajax({
+		type: "POST",
+		dataType: "json",
+		url: "ajax/submitAnswer.php",
+		data: $(form).serialize(),
+		success: function(response) {
+		},
+		error: function(xhr) {
+			myAlert("Error submitting answer: " + xhr.responseText);
+		},
+	});
+
+	return false;
+}

@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS user_challenges
 	PRIMARY KEY(user_id, challenge_id)
 ) ENGINE=InnoDB;
 
-DROP TABLE IF EXISTS users;
+/*DROP TABLE IF EXISTS users;*/
 CREATE TABLE IF NOT EXISTS users
 (
 	user_id VARCHAR(100) NOT NULL,
@@ -56,6 +56,6 @@ INSERT INTO challenge_sets VALUES ('math', 'Math Challenges', 1, 'Math challenge
 INSERT INTO challenge_sets VALUES ('puzzle', 'Puzzle Games', 2, 'These puzzle games will test your problem solving skills and will require coding skills like iteration and recursion. Plus, the solutions will help you improve your puzzle game skills!', now(), now());
 
 /* Initial challenge data */
-INSERT INTO challenges VALUES ('fib1', 'Fibonacci Sequence', 'math', 1, 1, 'Write a function named <code>fib</code> that takes <code>n</code>, an integer, as a parameter. Return the nth value of the fibonacci sequence.', 'TODO', now(), now());
+INSERT INTO challenges VALUES ('fib1', 'Fibonacci Sequence', 'math', 1, 1, 'The Fibonacci sequence is a mathematical sequence. It starts with (1, 1, 2, 3, 5, 8, 13, ...). Notice that each value is the sum of the previous two values. Write a function named <code>fib</code> that takes <code>n</code>, an integer, as a parameter. Return the nth value of the fibonacci sequence. The mathematical definition of the sequence is<p>fib(n=0) = 1<br/>fib(n=1) = 1<br/>fib(n>1) = fib(n-1) + fib(n-2)</p><p>Question: What are the <strong>last 50 digits</strong> of <code>fib(20000)</code>?</p><p>Hint: Even though the mathematical definition uses recursion, you may want to consider using iteration to solve this problem.</p>', '18631347739229074282048749390382177080100224710626', now(), now());
 INSERT INTO challenges VALUES ('cone_area', 'Surface Area of a Cone', 'math', 2, 1, 'Write a function named <code>cone_area</code> that takes <code>height</code> and <code>radius</code> as parameters. Return the surface area of the cone.', 'TODO', now(), now());
 INSERT INTO challenges VALUES ('sudoku', 'Sudoku Solver', 'puzzle', 1, 2, 'TODO', 'TODO', now(), now());

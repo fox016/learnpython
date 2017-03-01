@@ -51,4 +51,67 @@ class DBchallenges
 
 		return $set;
 	}
+
+	public function getChallenge($id, $userid)
+	{
+		$sql = "SELECT challenges.*, user.*
+			FROM challenges
+			LEFT JOIN user_challenges AS user ON user.challenge_id=challenges.id AND user.user_id=?
+			WHERE challenges.id=?";
+		$stmt = $this->dbh->prepare($sql);
+		$succcess = $stmt->execute(array($userid, $id));
+		$challenge = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $challenge;
+	}
+
+	public function getUser($userid)
+	{
+		$sql = "SELECT * FROM users WHERE user_id=?";
+		$stmt = $this->dbh->prepare($sql);
+		$succcess = $stmt->execute(array($userid));
+		$user = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $user;
+	}
+
+	public function insertUser($user)
+	{
+		$user = $this->getUser($user['user_id']);
+		$now = date("Y-m-d H:i:s");
+		$user['updated_date_time'] = $now;
+		if($user === FALSE)
+		{
+			$user['created_date_time'] = $now;
+			$this->performInsert("users", $user);
+		}
+		else
+		{
+			$this->performUpdate("users", array("name" => "user_id", "value" => $user['user_id']), $user);
+		}
+	}
+
+        private function performInsert($table, $data)
+        {
+                $columnNameArray = array_keys($data);
+                $columnNameStr = join(", ", $columnNameArray);
+		$values = str_repeat("?,", count($columnNameArray)-1) .'?';
+                $stmt = $this->dbh->prepare("INSERT INTO $table ($columnNameStr) VALUES ($values)");
+                $result = $stmt->execute(array_values($data));
+                if($result === TRUE)
+                        return $this->dbh->lastInsertId();
+                else
+                        return -1;
+        }
+
+        private function performUpdate($table, $idObj, $data)
+        {
+                $keyValuePairs = "";
+                foreach($data as $k=>$v)
+                        $keyValuePairs .= "$k=?,";
+                $keyValuePairs = rtrim($keyValuePairs, ",");
+                $stmt = $this->dbh->prepare("UPDATE $table SET $keyValuePairs WHERE {$idObj['name']}=?");
+                $values = array_values($data);
+                $values[] = $idObj['value'];
+                $result = $stmt->execute($values);
+                return $stmt->errorCode();
+        }
 }

@@ -16,8 +16,9 @@ try
 	if($payload)
 	{
 		$userid = $payload['sub'];
+		$user = buildUser($payload);
 		$cookie = buildCookie('userid', $userid);
-		echo json_encode(array("cookie" => $cookie, "refresh" => true));
+		echo json_encode(array("refresh" => true));
 	}
 	else
 		throw new Exception("Invalid Google token");

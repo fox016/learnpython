@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . "/classes/chapter.php");
+require_once(__DIR__ . "/../util/util-logging.php");
 $currentPage = NULL;
 
 /*
@@ -95,39 +96,9 @@ function showChallengeSet($challengeSetId)
 	$set = $db->getChallengeSet($challengeSetId, $userid);
 
 	if($set === FALSE)
-	{
 		echo "Challenge set id ($challengeSetId) not found";
-	}
 	else
-	{
-		?>
-		<h2><?php echo $set['name'];?></h2>
-		<p><?php echo $set['description'];?></p>
-		<table id='challengeSetTable'>
-			<thead>
-				<tr><th>Challenge Name</th><th>Difficulty</th><th>Completed</th><th>Forum</th></tr>
-			</thead>
-			<tbody>
-				<?php
-				foreach($set['challenges'] as $i => $challenge)
-				{
-					?>
-					<tr>
-						<td><a href='/learnpython/?challenge=<?php echo $challenge['id'];?>'><?php echo $challenge['name'];?></a></td>
-						<td><?php echo getDifficulty($challenge['difficulty']);?></td>
-					<?php if($challenge['completed_date_time'] === null) { ?>
-						<td></td>
-						<td></td>
-					<?php } else { ?>
-						<td><?php echo formatDate($challenge['completed_date_time']);?></td>
-						<td><a href='/learnpython/?forum=<?php echo $challenge['id'];?>'>Forum</a></td>
-					<?php } ?>
-					</tr>
-				<?php } ?>
-			</tbody>
-		</table>
-		<?php
-	}
+		include("html/challengeSets/template.php");
 }
 
 /*
@@ -139,10 +110,17 @@ function showChallenge($challengeId)
 	$currentPage = "challenge_$challengeId";
 	$userid = checkLogin();
 
-	echo "TODO show challenge $challengeId";
+	require_once(__DIR__ . "/db/DBchallenges.php");
+	$db = new DBchallenges();
+	$challenge = $db->getChallenge($challengeId, $userid);
 
-	$currentPage = "challenge_set_math"; // TODO mock
-	include_once("html/challenge/" . $challengeId . ".php"); // TODO mock
+	if($challenge === FALSE)
+		echo "Challenge id ($challengeId) not found";
+	else
+	{
+		$currentPage = "challenge_set_{$challenge['challenge_set']}";
+		include("html/challenge/template.php");
+	}
 }
 
 /*
@@ -184,6 +162,27 @@ function getDifficulty($n)
 		case 3: return "Hard";
 		default: return "Unknown";
 	}
+}
+
+/*
+ * Save google data for user in db
+ */
+function buildUser($googleUser)
+{
+	$user = array(
+		"user_id" => getVal($googleUser, 'sub', NULL),
+		"email" => getVal($googleUser, 'email', NULL),
+		"full_name" => getVal($googleUser, 'name', NULL),
+		"first_name" => getVal($googleUser, 'given_name', NULL),
+		"last_name" => getVal($googleUser, 'family_name', NULL),
+		"locale" => getVal($googleUser, 'locale', NULL),
+	);
+
+	require_once(__DIR__ . "/db/DBchallenges.php");
+	$db = new DBchallenges();
+	$rc = $db->insertUser($user);
+	appLog("insert user", LOG_DEBUG, "rc: $rc", __FILE__, __LINE__);
+	$db->commit();
 }
 
 /*
@@ -241,4 +240,14 @@ function getChallengeSets()
 function formatDate($date, $format="Y-m-d")
 {
 	return date($format, strtotime($date));
+}
+
+/*
+ * If index set in array, return value at index, else return default value
+ */
+function getVal($array, $index, $default="")
+{
+	if(isset($array[$index]))
+		return $array[$index];
+	return $default;
 }

@@ -78,7 +78,8 @@ function googleSignIn(googleUser)
 		data: {id_token: id_token},
 		success: function(response)
 		{
-			location.reload();
+			if(response.refresh)
+				location.reload();
 		},
 		error: function(xhr) {
 			$("#pageContent").append("Error with Google sign in: " + xhr.responseText);

@@ -1,9 +1,5 @@
 TODO
 
-- 3 Challenges
-	x Fibonacci
-	x Cone surface area
-	- Sudoku
 - Challenge Forums
 	- Read (display)
 	- Write (save)

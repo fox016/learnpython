@@ -75,6 +75,15 @@ class DBchallenges
 		return $user;
 	}
 
+	public function getForumEntries($challengeId)
+	{
+		$sql = "SELECT completed_date_time, code FROM user_challenges WHERE challenge_id=? AND code IS NOT NULL ORDER BY completed_date_time DESC";
+		$stmt = $this->dbh->prepare($sql);
+		$succcess = $stmt->execute(array($challengeId));
+		$entries = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $entries;
+	}
+
 	public function insertUser($user)
 	{
 		$oldUser = $this->getUser($user['user_id']);

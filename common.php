@@ -74,7 +74,7 @@ function showChapter($chapterId)
 }
 
 /*
- * Show challenge set associated with given chapter ID
+ * Show challenge set associated with given challenge set ID
  */
 function showChallengeSet($challengeSetId)
 {
@@ -99,9 +99,9 @@ function showChallengeSet($challengeSetId)
 }
 
 /*
- * Show challenge associated with given chapter ID
+ * Show challenge associated with given challenge ID
  */
-function showChallenge($challengeId)
+function showChallenge($challengeId, $showForum=false)
 {
 	global $currentPage;
 	$userid = checkLogin();
@@ -115,7 +115,15 @@ function showChallenge($challengeId)
 	else
 	{
 		$currentPage = "challenge_set_{$challenge['challenge_set']}";
-		include("html/challenge/template.php");
+		if($showForum)
+		{
+			$entries = $db->getForumEntries($challengeId);
+			include("html/forum/template.php");
+		}
+		else
+		{
+			include("html/challenge/template.php");
+		}
 	}
 }
 

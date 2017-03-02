@@ -18,6 +18,8 @@ try
 		showChallengeSet($_REQUEST['challengeSet']);
 	else if(isset($_REQUEST['challenge']))
 		showChallenge($_REQUEST['challenge']);
+	else if(isset($_REQUEST['forum']))
+		showChallenge($_REQUEST['forum'], true);
 	else
 		showHome();
 

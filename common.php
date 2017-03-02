@@ -104,7 +104,6 @@ function showChallengeSet($challengeSetId)
 function showChallenge($challengeId)
 {
 	global $currentPage;
-	$currentPage = "challenge_$challengeId";
 	$userid = checkLogin();
 
 	require_once(__DIR__ . "/db/DBchallenges.php");

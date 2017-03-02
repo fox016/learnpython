@@ -55,10 +55,11 @@ class DBchallenges
 
 	public function getChallenge($id, $userid)
 	{
-		$sql = "SELECT challenges.*, user.*
-			FROM challenges
-			LEFT JOIN user_challenges AS user ON user.challenge_id=challenges.id AND user.user_id=?
-			WHERE challenges.id=?";
+		$sql = "SELECT challenge.*, user.*, cset.name AS set_name
+			FROM challenges AS challenge
+			INNER JOIN challenge_sets AS cset ON cset.id=challenge.challenge_set
+			LEFT JOIN user_challenges AS user ON user.challenge_id=challenge.id AND user.user_id=?
+			WHERE challenge.id=?";
 		$stmt = $this->dbh->prepare($sql);
 		$succcess = $stmt->execute(array($userid, $id));
 		$challenge = $stmt->fetch(PDO::FETCH_ASSOC);

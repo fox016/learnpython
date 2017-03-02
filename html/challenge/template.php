@@ -1,4 +1,6 @@
-<h2 style='display:inline'><?php echo $challenge['name'];?></h2> - <?php echo getDifficulty($challenge['difficulty']);?>
+<div class='backLink'><a href='./?challengeSet=<?php echo $challenge['challenge_set'];?>'>&laquo; <?php echo $challenge['set_name'];?></a></div>
+
+<h2 class='challengeName'><?php echo $challenge['name'];?></h2> - <?php echo getDifficulty($challenge['difficulty']);?>
 
 <p class='description'><?php echo $challenge['description'];?></p>
 
@@ -10,6 +12,8 @@
 	</p>
 <?php } else { ?>
 	<p>
+		<div id='correctDiv'><strong>Correct!</strong> Share your code on the <a target='_blank' href='/learnpython/?forum=<?php echo $challenge['id'];?>'>forum</a></div>
+		<div id='incorrectDiv'><strong>Incorrect</strong>, the answer is not <span id='badGuess'></span></div>
 		<form onsubmit='return submitAnswer(this);'>
 			<input type=hidden name='challenge_id' id='challenge_id' value='<?php echo $challenge['id'];?>'>
 			<label for='solution'>Answer:&nbsp;</label><input type=text size='75' name='solution' id='solution' value=''>

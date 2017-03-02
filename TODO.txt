@@ -1,8 +1,5 @@
 TODO
 
-- Challenge UI
-	- Design UI
-		- Show success/failure message (page?) after submission
 - 3 Challenges
 	x Fibonacci
 	- Cone surface area

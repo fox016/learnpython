@@ -174,12 +174,24 @@ function submitAnswer(form)
 		return false;
 	}
 
+	$("#correctDiv").hide();
+	$("#incorrectDiv").hide();
 	$.ajax({
 		type: "POST",
 		dataType: "json",
 		url: "ajax/submitAnswer.php",
 		data: $(form).serialize(),
-		success: function(response) {
+		success: function(response)
+		{
+			if(response.correct)
+			{
+				$("#correctDiv").show();
+			}
+			else
+			{
+				$("#badGuess").html("<code>" + form.solution.value + "</code>");
+				$("#incorrectDiv").show();
+			}
 		},
 		error: function(xhr) {
 			myAlert("Error submitting answer: " + xhr.responseText);

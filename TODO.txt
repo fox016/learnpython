@@ -2,7 +2,7 @@ TODO
 
 - 3 Challenges
 	x Fibonacci
-	- Cone surface area
+	x Cone surface area
 	- Sudoku
 - Challenge Forums
 	- Read (display)

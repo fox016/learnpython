@@ -2,22 +2,11 @@ TODO
 
 - Challenge UI
 	- Design UI
-		x Coding area
-		x Description
-		x Difficulty
-		x If solved:
-			x Answer/solution
-			x Completed date
-			x Link to forum
-		- Else:
-			x Form to submit answer
-			- Verify answer
-			- Save user completed date
-	x All generated from DB
+		- Show success/failure message (page?) after submission
 - 3 Challenges
 	x Fibonacci
 	- Cone surface area
 	- Sudoku
 - Challenge Forums
-	- Read
-	- Write
+	- Read (display)
+	- Write (save)

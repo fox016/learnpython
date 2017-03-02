@@ -40,9 +40,6 @@ function showChapter($chapterId)
 	global $currentPage;
 	$currentPage = "chapter_$chapterId";
 
-	// Include DataCamp JS only on chapter pages
-	echo '<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>';
-
 	// Textbook opener
 	if($chapterId == "0")
 	{

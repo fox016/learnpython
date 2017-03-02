@@ -90,6 +90,14 @@ class DBchallenges
 		}
 	}
 
+	public function markChallengeComplete($userid, $challengeId)
+	{
+		$sql = "INSERT INTO user_challenges (user_id, challenge_id, completed_date_time) VALUES (?, ?, now())";
+		$stmt = $this->dbh->prepare($sql);
+		$success = $stmt->execute(array($userid, $challengeId));
+                return $stmt->errorCode();
+	}
+
         private function performInsert($table, $data)
         {
                 $columnNameArray = array_keys($data);

@@ -19,6 +19,12 @@ function initMyAlert(title)
  */
 function myAlert(str)
 {
+	if(typeof $("#myAlert").dialog !== "function")
+	{
+		alert(str);
+		return;
+	}
+
 	if(myAlertFlag) {
 		myAlertQueue.push({str:str});
 		return;
@@ -51,6 +57,13 @@ function myAlert(str)
 
 function myConfirm(str, callback, options)
 {
+	if(typeof $("#myAlert").dialog !== "function")
+	{
+		if(confirm(str))
+			callback();
+		return;
+	}
+
 	if(typeof options === "undefined")
 	{
 		options = {height: 200, width:300};

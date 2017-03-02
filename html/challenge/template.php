@@ -18,7 +18,6 @@
 	</p>
 <?php } ?>
 
-<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 <div data-datacamp-exercise data-lang="python">
 </div>
 

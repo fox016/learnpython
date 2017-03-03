@@ -86,6 +86,10 @@ h2.challengeName {
 }
 #noEntryDiv, #forumTable {
 	margin-top:20px;
+	width:100%;
+}
+#forumTable tbody td:nth-child(2) {
+	padding:10px 30px;
 }
 .forumCode {
 	width:100%;

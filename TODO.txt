@@ -1,5 +1,14 @@
 TODO
 
-- Challenge Forums
-	x Read (display)
-	- Write (save)
+- Step 6
+	- Chapter 4 (Booleans)
+	- Chapter 5 (Strings)
+	- Chapter 6 (Functions)
+	- Chapter 7 (Flow Control)
+	- Chapter 8 (Fixing Errors)
+- Step 7
+	- Challenge 4
+	- Challenge 5
+	- Challenge 6
+	- Challenge 7
+	- Challenge 8

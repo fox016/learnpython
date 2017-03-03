@@ -10,7 +10,6 @@ try
 	require_once(__DIR__ . "/../db/DBchallenges.php");
 	$db = new DBchallenges();
 	$challenge = $db->getChallenge($_POST['challenge_id'], $userid);
-	appLog("save answer", LOG_DEBUG, json_encode($challenge));
 
 	// If already answered
 	if($challenge['completed_date_time'] !== null)

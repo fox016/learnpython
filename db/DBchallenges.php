@@ -108,6 +108,14 @@ class DBchallenges
                 return $stmt->errorCode();
 	}
 
+	public function updateChallengeCode($userid, $challengeId, $code)
+	{
+		$sql = "UPDATE user_challenges SET code=? WHERE user_id=? AND challenge_id=?";
+		$stmt = $this->dbh->prepare($sql);
+		$success = $stmt->execute(array($code, $userid, $challengeId));
+                return $stmt->errorCode();
+	}
+
         private function performInsert($table, $data)
         {
                 $columnNameArray = array_keys($data);

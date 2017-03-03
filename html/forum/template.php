@@ -1,3 +1,5 @@
+<script type='text/javascript' src='js/forum.js'></script>
+
 <div class='backLink'><a href='./?challengeSet=<?php echo $challenge['challenge_set'];?>'>&laquo; <?php echo $challenge['set_name'];?></a></div>
 
 <h2 class='challengeName'><?php echo $challenge['name'];?></h2> - <?php echo getDifficulty($challenge['difficulty']);?>
@@ -12,7 +14,7 @@
 
 		<table id='forumTable' class='textbookTable'>
 			<thead>
-				<tr><th>Date Completed</th><th>Code</th></tr>
+				<tr><th style='width:150px'>Date Completed</th><th>Code</th></tr>
 			</thead>
 			<tbody>
 			<?php foreach($entries as $entry) { ?>
@@ -26,6 +28,9 @@
 
 	<?php } ?>
 
-	<div><textarea id='codeInput' class='forumCode' placeholder='Submit your code here'><?php echo $challenge['code'];?></textarea></div>
-	<div><button>Submit Code</button></div>
+	<form onsubmit='return submitCode(this);'>
+		<input type='hidden' name='challengeId' id='challengeId' value='<?php echo $challenge['id'];?>'>
+		<div><textarea id='codeInput' name='codeInput' class='forumCode' placeholder='Submit your code here'><?php echo $challenge['code'];?></textarea></div>
+		<div><input type='submit' value='Submit Code'></div>
+	</form>
 <?php } ?>

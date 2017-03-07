@@ -203,3 +203,8 @@ code {
 	padding:1px 6px;
 	border-radius:5px;
 }
+.datacampInstructions {
+	text-align:right;
+	color:#777;
+	font-size:0.8em;
+}

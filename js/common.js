@@ -27,6 +27,9 @@ $(document).ready(function()
 		$("#expandSideBar").hide();
 		$("#sideBarParent").show();
 	});
+
+	// Datacamp instructions
+	$("div[data-lang='python']").before("<div class='datacampInstructions'>Hit Ctrl-L (Command-L on Mac) to clear right console.</div>");
 });
 
 // Trigger resize once window is completely done loading

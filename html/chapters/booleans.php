@@ -14,9 +14,19 @@ Just like you can use operations on two numbers to get another number (e.g., 2 +
 		<tr><td>Operation (Python)</td><td>Operation (Other)</td><td>Result</td></tr>
 	</thead>
 	<tbody>
-		<tr><td><code>x and y</code></td><td><code>x &amp;&amp; y</code></td><td>And</td></tr>
-		<tr><td><code>x or y</code></td><td><code>x || y</code></td><td>Or</td></tr>
-		<tr><td><code>not x</code></td><td><code>!x</code></td><td>Not</td></tr>
+		<tr><td><code>x and y</code></td><td><code>x &amp;&amp; y</code></td><td>And (if <strong>both</strong> are True, it will return True)</td></tr>
+		<tr><td></td><td></td><td><code>True and True = True</code></td></tr>
+		<tr><td></td><td></td><td><code>True and False = False</code></td></tr>
+		<tr><td></td><td></td><td><code>False and True = False</code></td></tr>
+		<tr><td></td><td></td><td><code>False and False = False</code></td></tr>
+		<tr><td><code>x or y</code></td><td><code>x || y</code></td><td>Or (if <strong>at least one</strong> is True, it will return True)</td></tr>
+		<tr><td></td><td></td><td><code>True or True = True</code></td></tr>
+		<tr><td></td><td></td><td><code>True or False = True</code></td></tr>
+		<tr><td></td><td></td><td><code>False or True = True</code></td></tr>
+		<tr><td></td><td></td><td><code>False or False = False</code></td></tr>
+		<tr><td><code>not x</code></td><td><code>!x</code></td><td>Not (if x is False it will return True)</td></tr>
+		<tr><td></td><td></td><td><code>not False = True</code></td></tr>
+		<tr><td></td><td></td><td><code>not True = False</code></td></tr>
 	</tbody>
 </table>
 
@@ -91,7 +101,7 @@ The last chapter discussed number operations that produce numbers. Well, there a
 		e = 7
 		f = 3
 
-		# This code performs the operations
+		# This code performs the operations (don't change)
 		var1 = a > b
 		var2 = a >= d
 		var3 = c < e
@@ -99,7 +109,7 @@ The last chapter discussed number operations that produce numbers. Well, there a
 		var5 = a == d
 		var6 = e != c
 
-		# This prints the results
+		# This prints the results (don't change)
 		print(var1)
 		print(var2)
 		print(var3)
@@ -114,10 +124,10 @@ The last chapter discussed number operations that produce numbers. Well, there a
 	</code>
 	<div data-type="hint">
 		<ul>
-			<li>Make a less than or equal to b</li>
-			<li>Make a less than d</li>
-			<li>Make e equal to c</li>
-			<li>Make c greater than f</li>
+			<li>Make <code>a</code> less than or equal to <code>b</code></li>
+			<li>Make <code>a</code> less than <code>d</code></li>
+			<li>Make <code>e</code> equal to <code>c</code></li>
+			<li>Make <code>c</code> greater than <code>f</code></li>
 		</ul>		
 	</div>
 </div>

@@ -23,5 +23,10 @@
 <?php } ?>
 
 <div data-datacamp-exercise data-lang="python">
+	<?php if($challenge['completed_date_time'] !== null && $challenge['code'] !== null) { ?>
+	<code data-type="sample-code">
+<?php echo $challenge['code'];?>
+	</code>
+	<?php } ?>
 </div>
 

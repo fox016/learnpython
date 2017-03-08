@@ -44,7 +44,7 @@ In the case above, <code>is_valid_user</code> will evaluate to <code>True</code>
 </p>
 
 <p>
-Use the coding simulation below to change the values of <code>x</code> and <code>y</code> to better understand how boolean operations work.
+Use the coding exercise below to change the values of <code>x</code> and <code>y</code> to better understand how boolean operations work.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -88,12 +88,12 @@ The last chapter discussed number operations that produce numbers. Well, there a
 	</tbody>
 </table>
 
-<p>Change the values in the coding simulation below to make every number comparison evaluate to <code>False</code>.</p>
+<p>Change the values in the coding exercise below to make every number comparison evaluate to <code>False</code>.</p>
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
 		# Change these values
-		# Make the simulation print False 6 times
+		# Make the exercise print False 6 times
 		a = 4
 		b = 6
 		c = 3

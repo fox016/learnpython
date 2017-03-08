@@ -22,13 +22,15 @@ function buildChapterList()
 	$chapterManager->addChapter("errors", "Fixing Errors");
 	$chapterManager->addChapter("iteration", "Loops");
 	$chapterManager->addChapter("lists", "Lists");
+	$chapterManager->addChapter("install", "Install Python");
 	$chapterManager->addChapter("fileio", "File I/O");
 	$chapterManager->addChapter("dictionaries", "Dictionaries");
 	$chapterManager->addChapter("classes", "Classes &amp; Objects");
 	$chapterManager->addChapter("sets", "Sets");
 	$chapterManager->addChapter("tuples", "Tuples");
-	$chapterManager->addChapter("comprehensions", "List Comprehensions");
+	$chapterManager->addChapter("modules", "Modules");
 	$chapterManager->addChapter("recursion", "Recursion");
+	$chapterManager->addChapter("comprehensions", "Comprehensions");
 	$chapterManager->addChapter("generators", "Generators");
 }
 

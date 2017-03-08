@@ -61,10 +61,6 @@ There are three functions that can be used to convert string data to number data
 To convert number data to string data, use str. You can use <code>str(num1)</code> to convert any number <code>num1</code> to a string.
 </p>
 
-<p>
-When you use these type conversion functions, you can store the result in a new variable or just use it as it is. TODO 
-</p>
-
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
 		# Input from user, do not change
@@ -100,14 +96,129 @@ When you use these type conversion functions, you can store the result in a new 
 	</div>
 </div>
 
-<h2>Substring</h2>
+<h2>Substrings</h2>
 
-<p>TODO from beginning, to end, from start index to end index</p>
+<p>
+A substring is a part of a string. If you are given a string in a variable named <code>address</code> with the value <code>"123 Rocky Road, Glace, LA 12345"</code> and you want to isolate the zip code, you need some way of isolating just the last five characters of the string. Substrings allow you to do just that: isolate parts of a string. It can be from the beginning, middle, or end of the string. It can be a single character from the string or a large number of characters.
+</p>
+
+<p>
+There are many approaches that different programming languages take to offer this kind of functionality. Python's approach is an uncommon one, but easy to read and understand once you know the rules. To understand Python's approach to substrings, you must first understand a concept known as <em>0-based indexing</em>. Typically when we teach kids to count, we teach them to start at 1. This is an example of 1-based indexing, and we're very used to it. 0-based indexing starts counting at 0 instead of 1, which can be confusing at first and it might take some getting used to. To extract a substring in Python, you must know the index of both the starting character and the ending character of the range you want to include. Consider the following string:
+</p>
+<p>
+<code>The quick red fox jumped over the lazy brown dogs.</code>
+</p>
+<p>
+Strings use 0-based indexing. The "T" in "The" is at index 0. The "h" is at index 1, "e" at index 2, " " at index 3, and so on. If we wanted to cut out the substring "red fox", we would first have to know the index of the "r" in "red" and the index of the "x" in "fox". The "r" is at index 10, and the "x" at index 16. Now that we have those indexes, we need to know the syntax for extracting substrings in Python:
+</p>
+<p>
+<code>substring = str_name[ <em>start index (inclusive)</em> : <em>end index (exclusive)</em> ]</code>
+</p>
+<p>
+That might look a little intimidating at first, so let's break it down. After the opening bracket ([), insert the start index of the first character to include. In our example, that index is 10. Then put a colon (:). After the colon, insert the index of the first character to exclude. In our example, we want to include up to index 16, so the first character to exclude is at index 17:
+</p>
+<p>
+<code>fox_string = "The quick red fox jumped over the lazy brown dogs."</code><br/>
+<code>substring = fox_string[10:17]</code><br/>
+<code>print(substring) # This prints out "red fox"</code><br/>
+</p>
+
+<p>
+If you want the substring to start at the beginning, such as "The quick red fox", then you can use 0 as the starting index (<code>substring = fox_string[0:17]</code>) or just leave the start index blank (<code>substring = fox_string[:17]</code>). If you want the substring to end at the end of the original string, such as "lazy brown dogs.", then you can leave the end index blank (<code>substring = fox_string[34:]</code>).
+</p>
+
+<p>
+The coding exercise below has a hidden string named <code>secret_string</code>. Follow the instructions in the comments to complete the exercise.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="pre-exercise-code">
+		secret_string = "ALGERNON: My dear Aunt Augusta, I mean he was found out! The doctors found out that Bunbury could not live, that is what I mean. So Bunbury died. LADY BRACKNELL: He seems to have had great confidence in the opinion of his physicians. I am glad, however, that he made up his mind at the last to some definite course of action, and acted under proper medical advice."
+	</code>
+	<code data-type="sample-code">
+		#Print the first 145 characters of secret_string (index 0 to 144)
+
+		#Print secret_string starting at index 146 to the end
+
+		#Print secret_string from index from index 57 to index 232 (include index 232)
+	</code>
+	<code data-type="solution">
+		#Print the first 145 characters of secret_string (index 0 to 144)
+		print(secret_string[:145])
+
+		#Print secret_string starting at index 146 to the end
+		print(secret_string[146:])
+
+		#Print secret_string from index 57 to index 232 (include index 232)
+		print(secret_string[57:233])
+	</code>
+	<code data-type="sct">
+		test_output_contains("ALGERNON: My dear Aunt Augusta, I mean he was found out! The doctors found out that Bunbury could not live, that is what I mean. So Bunbury died.\nLADY BRACKNELL: He seems to have had great confidence in the opinion of his physicians. I am glad, however, that he made up his mind at the last to some definite course of action, and acted under proper medical advice.\nThe doctors found out that Bunbury could not live, that is what I mean. So Bunbury died. LADY BRACKNELL: He seems to have had great confidence in the opinion of his physicians.", False, "Check your indexes!")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">
+		Remember that the number after the colon is the first character to exclude. To include index 232, use the number 233 after the colon.
+	</div>
+</div>
 
 <h2>Common String Functions</h2>
 
-<p>TODO upper, lower, replace</p>
+<table class='textbookTable'>
+	<thead>
+		<tr><th colspan=2>Common String Functions</th></tr>
+		<tr><td>Function</td><td>Result</td></tr>
+	</thead>
+	<tbody>
+		<tr><td>len(<em>string</em>)</td><td>Returns the length of the string as a number</td></tr>
+		<tr><td></td><td>len("The") = 3</td></tr>
+		<tr><td><em>string</em>.lower()</td><td>Returns the string all lowercase</td></tr>
+		<tr><td><td>"I like learning about FERPA in France".lower() = "i like learning about ferpa in france."</td></tr>
+		<tr><td><em>string</em>.upper()</td><td>Returns the string all uppercase</td></tr>
+		<tr><td><td>"I like learning about FERPA in France".upper() = "I LIKE LEARNING ABOUT FERPA IN FRANCE."</td></tr>
+		<tr><td><em>string</em>.replace(<em>substring</em>, <em>new</em>)</td><td>Returns the string with all cases of <em>substring</em> replaced with <em>new</em></td></tr>
+		<tr><td><td>"I like learning about FERPA in France".replace("France", "Paris") = "I like learning about FERPA in Paris."</td></tr>
+	</tbody>
+</table>
+
+<p>
+Use the coding exercise below to play around with these functions to learn more about how they work.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		tweet = "I like learning about FERPA in France."
+
+		print(tweet)
+		print(len(tweet))
+
+		# Print lower case
+		print(tweet.lower())
+
+		# Print upper case
+		print(tweet.upper())
+
+		# Replace 'France' with 'Paris'
+		print(tweet.replace("France", "Paris"))
+
+		# Print last 7 characters
+		print(tweet[len(tweet)-7:])
+
+		# Replace 'France' with 'Paris'
+		# Then print length
+		# Then print last 6 characters
+		paris = tweet.replace("France", "Paris")
+		print(len(paris))
+		print(paris[len(paris)-6:])
+
+		# Make lower case
+		# Then replace 'france' with 'paris'
+		# Then print it all upper case
+		print(tweet.lower().replace("france", "paris").upper())
+	</code>
+</div>
 
 <h2>Review</h2>
 
 <p>TODO review</p>
+
+<p>TODO final exercise</p>

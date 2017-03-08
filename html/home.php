@@ -9,11 +9,11 @@
 
 	<h1>Interactive Textbook</h1>
 	<p>
-		Python Explorer includes an interactive programming textbook that helps beginning coders to learn about general principles of coding while learning Python. The textbook contains interactive coding simulations that allow learners to apply what they learn as they learn it. Although all of the interactive simulations only run Python code, the textbook teaches basic coding principles that can be applied to a wide variety of programming languages.
+		Python Explorer includes an interactive programming textbook that helps beginning coders to learn about general principles of coding while learning Python. The textbook contains interactive coding exercises that allow learners to apply what they learn as they learn it. Although all of the interactive exercises only run Python code, the textbook teaches basic coding principles that can be applied to a wide variety of programming languages.
 	</p>
 
 	<h1>Coding Challenges</h1>
 	<p>
-		The simulations in the interactive textbook help learners to apply specific coding principles in specific ways using just a few lines of code. By contrast, the coding challenges are more complex; they require more work and an integration of knowledge. Coding challenges are broken up first by topic, then by complexity.
+		The exercises in the interactive textbook help learners to apply specific coding principles in specific ways using just a few lines of code. By contrast, the coding challenges are more complex; they require more work and an integration of knowledge. Coding challenges are broken up first by topic, then by complexity.
 	</p>
 </div>

@@ -69,7 +69,7 @@ For some versions of Python and for most programming languages, the types of the
 <h2>Mathematical Equations</h2>
 
 <p>
-Using number types and operations, you can code a mathematical <em>equation</em>. An equation performs operations on operands to produce a result. The coding activity above codes very basic equations: addition, subtraction, multiplication, etc. You can combine these basic operations to code more complex equations, such as calculating the area of a circle from its radius or calculating a Fahrenheit temperature given a Celcius value. Use the coding simulation below to play with some of these mathematical equations.
+Using number types and operations, you can code a mathematical <em>equation</em>. An equation performs operations on operands to produce a result. The coding activity above codes very basic equations: addition, subtraction, multiplication, etc. You can combine these basic operations to code more complex equations, such as calculating the area of a circle from its radius or calculating a Fahrenheit temperature given a Celcius value. Use the coding exercise below to play with some of these mathematical equations.
 </p>
 
 <div data-datacamp-exercise data-lang="python">

@@ -58,7 +58,7 @@ That is a lot of similar code repeated over and over. Let's design a function th
 To start defining a function in Python, use the following syntax: <code>def <em>function_name</em>(<em>list_of_input_variables</em>):</code>. For example, we can use <code>def calculate_pizza_cost(size, price):</code> to define a function with a name of calculate_pizza_cost and inputs named size and price.
 </p>
 <p>
-We have the function name and the input, now we need to define the process of the function. In Python, the process starts on the next line of code, and every line of code in the process is tabbed in once. Our process may look something like this:
+We have the function name and the input, now we need to define the process of the function, also known as the <em>body</em> of the function. In Python, the process starts on the next line of code, and every line of code in the process is tabbed in once. The process can access the input data by referring to the names of the input variables. Our process may look something like this:
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -72,7 +72,10 @@ We have the function name and the input, now we need to define the process of th
 </div>
 
 <p>
-Now we have the name, the input, and the process. We now need to return output. We want to return the cost, which in this case is stored in the variable named <code>cost</code>. We do this using the syntax <code>return cost</code>:
+Notice that the process refers to both <code>size</code> and <code>price</code>. The function itself doesn't know the specific values of <code>size</code> and <code>price</code>, those are variables that are passed in from the outside when the function is called. Just like the <code>len</code> function works on any string you pass in as input, our function will work on any values of size and price that are passed in when the function is called.
+</p>
+
+<p>Now we have the name, the input, and the process. We now need to return output. We want to return the cost, which in this case is stored in the variable named <code>cost</code>. We do this using the syntax <code>return cost</code>:
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -87,7 +90,7 @@ Now we have the name, the input, and the process. We now need to return output. 
 </div>
 
 <p>
-Now we have a function that takes a size and price as input and returns the cost per square inch of the pizza. Now that we have a function, we need to call the function:
+Now we have a function that takes a size and price as input and returns the cost per square inch of the pizza. Now that we have a function, we need to call the function from the outside and pass in the input values. The values that get passed into the function will define the values of the <code>size</code> and <code>price</code> values in the function body:
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
@@ -121,7 +124,7 @@ Now we have a function that takes a size and price as input and returns the cost
 </div>
 
 <p>
-That looks better, but we can use more functions to make it even better. The code repeats the call to calculate the cost and the print function multiple times. We can define another function called <code>print_cost</code> that takes the size and price as input, calls <code>calculate_pizza_cost</code> to get the cost, then prints the cost:
+That code looks better, but we can use more functions to make it even better. The code repeats the call to calculate the cost and the print function multiple times. We can define another function called <code>print_cost</code> that takes the size and price as input, calls <code>calculate_pizza_cost</code> to get the cost, then prints the cost:
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -156,7 +159,7 @@ That looks better, but we can use more functions to make it even better. The cod
 </div>
 
 <p>
-Now you may realize that we don't even need the variables for all the sizes and prices. We only use them to call the <code>print_cost</code> function, so we can just pass the values straight into the <code>print_cost</code> function instead:
+Now you may realize that we don't even need the variables for all the sizes and prices. We only refer to each of them one time to pass them in as input to the <code>print_cost</code> function, so we can just pass the values straight into the <code>print_cost</code> function instead:
 </p>
 
 <div data-datacamp-exercise data-lang="python">
@@ -176,13 +179,13 @@ Now you may realize that we don't even need the variables for all the sizes and 
 	print_cost(12, 7.00)
 	print_cost(16, 11.25)
 	print_cost(20, 15.25)
+
+	print_cost(40, 30.00)
 	</code>
 </div>
 
 <p>
-That code looks way better! And now if the pizza place decides to add another pizza size, the only code you have to change is to add one line that calls the <code>print_cost</code> function with the values for the new size and the associated price. Behold, the power of functions!
+That code looks way better! And now if the pizza place decides to add another pizza size (like a 40-inch pizza for $30.00), the only code you have to change is to add one line that calls the <code>print_cost</code> function with the values for the new size and the associated price. Behold, the power of functions!
 </p>
 
-<h2>Variable Scope</h2>
-
-<p>TODO</p>
+<p>TODO exercise</p>

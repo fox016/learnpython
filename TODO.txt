@@ -3,8 +3,8 @@ TODO
 - Step 6
 	x Chapter 4 (Booleans)
 	x Chapter 5 (Strings)
-	- Chapter 6 (Functions)
-	- Chapter 7 (Flow Control)
+	x Chapter 6 (Functions)
+	- Chapter 7 (Conditionals)
 	- Chapter 8 (Fixing Errors)
 - Step 7
 	- Challenge 4

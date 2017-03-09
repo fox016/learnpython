@@ -189,7 +189,7 @@ That code looks way better! And now if the pizza place decides to add another pi
 </p>
 
 <p>
-Now that you have seen some examples of using functions, it's time to do one on your own! In the <a href='?chapter=numbertypes'>Number Types chapter</a> you did an exercise to perform temperature conversions. Use the coding practice below to write two functions: one that converts a Fahrenheit temperature to a Celsius temperature (called <code>f_to_c</code> and one that converts a Celsius temperature to a Fahrenheit temperature (called <code>c_to_f</code>). Use the following formulae:
+Now that you have seen some examples of using functions, it's time to do one on your own! In the <a href='?chapter=numbertypes'>Number Types chapter</a> you did an exercise to perform temperature conversions. Use the coding practice below to write two functions: one that converts a Fahrenheit temperature to a Celsius temperature (called <code>f_to_c</code>) and one that converts a Celsius temperature to a Fahrenheit temperature (called <code>c_to_f</code>). Use the following formulae:
 </p>
 <p>
 <img src='images/temp_conv.gif'>

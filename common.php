@@ -18,7 +18,7 @@ function buildChapterList()
 	$chapterManager->addChapter("booleans", "Booleans");
 	$chapterManager->addChapter("strings", "Strings");
 	$chapterManager->addChapter("functions", "Functions");
-	$chapterManager->addChapter("conditionals", "Flow Control");
+	$chapterManager->addChapter("conditionals", "Conditionals");
 	$chapterManager->addChapter("errors", "Fixing Errors");
 	$chapterManager->addChapter("lists", "Lists");
 	$chapterManager->addChapter("iteration", "Loops");
@@ -30,7 +30,8 @@ function buildChapterList()
 	$chapterManager->addChapter("tuples", "Tuples");
 	$chapterManager->addChapter("modules", "Modules");
 	$chapterManager->addChapter("recursion", "Recursion");
-	$chapterManager->addChapter("comprehensions", "Comprehensions");
+	$chapterManager->addChapter("hof", "High Order Functions");
+	$chapterManager->addChapter("comprehensions", "List Comprehensions");
 	$chapterManager->addChapter("generators", "Generators");
 }
 

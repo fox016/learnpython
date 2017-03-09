@@ -40,7 +40,7 @@ Why would you use these operations? Pretend you're making a website where only p
 </p>
 
 <p>
-In the case above, <code>is_valid_user</code> will evaluate to <code>True</code> because both operands are <code>True</code>. If either <code>is_old_enough</code> is <code>False</code> or <code>is_box_checked</code> is <code>False</code>, then <code>is_valid_user</code> is also <code>False</code>. These operations are very useful to understand when programming <a href='?chapter=conditionals'>flow control</a> and <a href='?chapter=iteration'>loops</a>, which will be discussed in later chapters.
+In the case above, <code>is_valid_user</code> will evaluate to <code>True</code> because both operands are <code>True</code>. If either <code>is_old_enough</code> is <code>False</code> or <code>is_box_checked</code> is <code>False</code>, then <code>is_valid_user</code> is also <code>False</code>. These operations are very useful to understand when programming <a href='?chapter=conditionals'>conditionals</a> and <a href='?chapter=iteration'>loops</a>, which will be discussed in later chapters.
 </p>
 
 <p>

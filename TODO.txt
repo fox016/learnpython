@@ -2,7 +2,7 @@ TODO
 
 - Step 6
 	x Chapter 4 (Booleans)
-	- Chapter 5 (Strings)
+	x Chapter 5 (Strings)
 	- Chapter 6 (Functions)
 	- Chapter 7 (Flow Control)
 	- Chapter 8 (Fixing Errors)

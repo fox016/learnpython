@@ -219,6 +219,96 @@ Use the coding exercise below to play around with these functions to learn more 
 
 <h2>Review</h2>
 
-<p>TODO review</p>
+<p>
+Concatenate strings using the + operator: <code> "Hello, " + "World!"</code><br/>
+Use the functions <code>int</code>, <code>long</code>, or <code>float</code> to convert a string to a number type: <code>num_input = int(string_input)</code><br/>
+Use the <code>str</code> function to convert a number type into a string: <code>string_output = str(num_output)</code><br/>
+Use brackets to extract a substring from a string: <code>substring = my_string[3:27]</code> (returns indexes 3 to 26, inclusive)<br/>
+Use the <code>len</code> function to get the length of a string: <code>print(len("hello"))</code> (5)<br/>
+Use the <code>lower</code> function to get a lowercase copy of the string: <code>lower_my_str = my_str.lower()</code><br/>
+Use the <code>upper</code> function to get a uppercase copy of the string: <code>upper_my_str = my_str.upper()</code><br/>
+Use the <code>replace</code> function to find/replace parts of a string: <code>tweet = "I love you".replace("love", "don't need")</code><br/>
+</p>
 
-<p>TODO final exercise</p>
+<p>
+The exercise below has a hidden string named <code>secret_string</code>. It is a 10-digit phone number (e.g. 1234567890) followed by a space (" ") and then a person's name.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="pre-exercise-code">
+		secret_string = "8012248219 Michael Jackson"
+	</code>
+	<code data-type="sample-code">
+		# Define variable total_length to be the length of secret_string
+		total_length = 0
+		print(total_length)
+
+		# Define variable name_length to be the length of the name
+		# Hint: subtract 11 from the total length
+		name_length = 0
+		print(name_length)
+
+		# Define variable phone as just the phone number
+		phone = secret_string[:]
+		print(phone)
+
+		# Define variable name as just the name
+		name = secret_string[:]
+		print(name)
+
+		# Define variable lower_name as the name all lower case
+		lower_name = name
+		print(lower_name)
+
+		# Define variable upper_name as the name all upper case
+		upper_name = name
+		print(upper_name)
+	</code>
+	<code data-type="solution">
+		# Define variable total_length to be the length of secret_string
+		total_length = len(secret_string)
+		print(total_length)
+
+		# Define variable name_length to be the length of the name
+		name_length = total_length - 11
+		print(name_length)
+
+		# Define variable phone as just the phone number
+		phone = secret_string[:10]
+		print(phone)
+
+		# Define variable name as just the name
+		name = secret_string[11:]
+		print(name)
+
+		# Define variable lower_name as the name all lower case
+		lower_name = name.lower()
+		print(lower_name)
+
+		# Define variable upper_name as the name all upper case
+		upper_name = name.upper()
+		print(upper_name)
+
+		# Define variable nickname as name with the "chael" replaced with "ke"
+		nickname = name.replace("chael", "ke")
+		print(nickname)
+	</code>
+	<code data-type="sct">
+		test_object("total_length")
+		test_object("name_length")
+		test_object("phone")
+		test_object("name")
+		test_object("lower_name")
+		test_object("upper_name")
+		test_object("nickname")
+		test_output_contains("26\n15\n8012248219\nMichael Jackson\nmichael jackson\nMICHAEL JACKSON\nMike Jackson", False, "Incorrect output")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">
+		<ul>
+			<li>Subtract 11 from total_length to get name length (10 character phone number and 1 character space)</li>
+			<li>The phone number is from index 0 to index 9, inclusive</li>
+			<li>The name starts at index 11 and goes to the end of secret_string</li>
+		</ul>
+	</div>
+</div>

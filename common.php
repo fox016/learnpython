@@ -20,8 +20,8 @@ function buildChapterList()
 	$chapterManager->addChapter("functions", "Functions");
 	$chapterManager->addChapter("conditionals", "Flow Control");
 	$chapterManager->addChapter("errors", "Fixing Errors");
-	$chapterManager->addChapter("iteration", "Loops");
 	$chapterManager->addChapter("lists", "Lists");
+	$chapterManager->addChapter("iteration", "Loops");
 	$chapterManager->addChapter("install", "Install Python");
 	$chapterManager->addChapter("fileio", "File I/O");
 	$chapterManager->addChapter("dictionaries", "Dictionaries");

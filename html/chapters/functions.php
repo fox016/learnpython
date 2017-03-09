@@ -5,7 +5,7 @@ This book has already used some examples of functions. The <code>print</code> fu
 <h2>What Do Functions Do?</h2>
 
 <p>
-Functions should do <strong>at least one</strong> of the following three things:
+Functions do <strong>at least one</strong> (and possibly all) of the following three things:
 </p>
 <ol>
 	<li>Accept one or more values as input</li>
@@ -188,4 +188,75 @@ Now you may realize that we don't even need the variables for all the sizes and 
 That code looks way better! And now if the pizza place decides to add another pizza size (like a 40-inch pizza for $30.00), the only code you have to change is to add one line that calls the <code>print_cost</code> function with the values for the new size and the associated price. Behold, the power of functions!
 </p>
 
-<p>TODO exercise</p>
+<p>
+Now that you have seen some examples of using functions, it's time to do one on your own! In the <a href='?chapter=numbertypes'>Number Types chapter</a> you did an exercise to perform temperature conversions. Use the coding practice below to write two functions: one that converts a Fahrenheit temperature to a Celsius temperature (called <code>f_to_c</code> and one that converts a Celsius temperature to a Fahrenheit temperature (called <code>c_to_f</code>). Use the following formulae:
+</p>
+<p>
+<img src='images/temp_conv.gif'>
+</p>
+<p>
+<img src='images/temp_conv2.gif'>
+</p>
+<p>
+Where C is degrees Celsius and F is degrees Fahrenheit.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		# function f_to_c
+		# input - fahrenheit temperature
+		# return - celsius temperature
+
+		# function c_to_f
+		# input - celsius temperature
+		# return - fahrenheit temperature
+
+		# tests (don't change these)
+		print(f_to_c(95))
+		print(f_to_c(212))
+		print(f_to_c(32))
+		print(f_to_c(-40))
+		print(f_to_c(78))
+
+		# tests (don't change these)
+		print(c_to_f(0))
+		print(c_to_f(-40))
+		print(c_to_f(35))
+		print(c_to_f(100))
+		print(c_to_f(29))
+	</code>
+	<code data-type="solution">
+		# function f_to_c
+		# input - fahrenheit temperature
+		# return - celsius temperature
+		def f_to_c(f):
+			return (5.0/9.0) * (f - 32)
+
+		# function c_to_f
+		# input - celsius temperature
+		# return - fahrenheit temperature
+		def c_to_f(c):
+			return (9.0/5.0) * c + 32
+
+		# tests (don't change these)
+		print(f_to_c(95))
+		print(f_to_c(212))
+		print(f_to_c(32))
+		print(f_to_c(-40))
+		print(f_to_c(27.5))
+
+		# tests (don't change these)
+		print(c_to_f(0))
+		print(c_to_f(-40))
+		print(c_to_f(35))
+		print(c_to_f(100))
+		print(c_to_f(29))
+	</code>
+	<code data-type="sct">
+		test_output_contains("35.0\n100.0\n0.0\n-40.0\n-2.5\n32.0\n-40.0\n95.0\n212.0\n84.2", False, "Incorrect output")
+	</code>
+	<div data-type="hint">
+		<code>c = (5.0/9.0) * (f - 32)</code>
+		<code>f = (9.0/5.0) * c + 32</code>
+	</div>
+</div>

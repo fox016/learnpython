@@ -30,6 +30,7 @@ function buildChapterList()
 	$chapterManager->addChapter("tuples", "Tuples");
 	$chapterManager->addChapter("modules", "Modules");
 	$chapterManager->addChapter("recursion", "Recursion");
+	$chapterManager->addChapter("exceptions", "Exceptions");
 	$chapterManager->addChapter("hof", "High Order Functions");
 	$chapterManager->addChapter("comprehensions", "List Comprehensions");
 	$chapterManager->addChapter("generators", "Generators");

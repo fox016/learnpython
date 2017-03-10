@@ -4,7 +4,7 @@ TODO
 	x Chapter 4 (Booleans)
 	x Chapter 5 (Strings)
 	x Chapter 6 (Functions)
-	- Chapter 7 (Conditionals)
+	x Chapter 7 (Conditionals)
 	- Chapter 8 (Fixing Errors)
 - Step 7
 	- Challenge 4

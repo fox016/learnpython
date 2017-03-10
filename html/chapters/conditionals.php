@@ -127,9 +127,9 @@ It's time for a challenge. In the exercise below, fill out the code for the func
 <ul>
 	<li>If the color is "red" and the direction is "straight" or "left", return "stop"</li>
 	<li>If the color is "red" and the direction is "right", return "turn after stopping if traffic is clear"</li>
-	<li>If the color is "yellow", return "prepare to stop"</li>
 	<li>If the color is "green" and the direction is "straight" or "right", return "procede with caution"</li>
 	<li>If the color is "green" and the direction is "left", return "turn if traffic is clear"</li>
+	<li>If the color is "yellow", return "prepare to stop"</li>
 	<li>If the color is not one of these three colors, return "error: invalid color"</li>
 </ul>
 
@@ -139,7 +139,7 @@ It's time for a challenge. In the exercise below, fill out the code for the func
 		# input - color (red, green, yellow), direction (left, right, straight)
 		# return correct instructions
 		def at_stoplight (color, direction):
-			pass # delete this line and write your code
+			return "zoom on through!" # delete this line and write your code
 
 		# tests (do not change)
 		print(at_stoplight("red", "left"))
@@ -182,9 +182,10 @@ It's time for a challenge. In the exercise below, fill out the code for the func
 		print(at_stoplight("yellow", "left"))
 		print(at_stoplight("yellow", "right"))
 		print(at_stoplight("yellow", "straight"))
+		print(at_stoplight("blue", "left"))
 	</code>
 	<code data-type="sct">
-		test_output_contains("stop\nturn after stopping if traffic is clear\nstop\nturn if traffic is clear\nprocede with caution\nprocede with caution\nprepare to stop\nprepare to stop\nprepare to stop", False, "Incorrect output")
+		test_output_contains("stop\nturn after stopping if traffic is clear\nstop\nturn if traffic is clear\nprocede with caution\nprocede with caution\nprepare to stop\nprepare to stop\nprepare to stop\nerror: invalid color", False, "Incorrect output")
 		success_msg("Great job!")
 	</code>
 	<div data-type="hint">

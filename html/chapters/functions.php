@@ -254,6 +254,7 @@ Where C is degrees Celsius and F is degrees Fahrenheit.
 	</code>
 	<code data-type="sct">
 		test_output_contains("35.0\n100.0\n0.0\n-40.0\n-2.5\n32.0\n-40.0\n95.0\n212.0\n84.2", False, "Incorrect output")
+		success_msg("Great job!")
 	</code>
 	<div data-type="hint">
 		<code>c = (5.0/9.0) * (f - 32)</code>

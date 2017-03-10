@@ -64,41 +64,130 @@ There are also instances where you will want your program to do one thing if the
 <h2>The If-elif-else Statement</h2>
 
 <p>
-Now imagine a case where you want a user to input their age and you print a string like "You are a child", "You are in your teens", "You are in your twenties", "You are in your thirties", and so on. You want the program to print exactly one string for any given age, but there are more than two possible outcomes. You can use an if-elif-else statement. In an in-elif-else statement, the first condition that is true determines the code that is run. Once one condition is true and the code is run, the computer doesn't even look at the other conditions: it already found one, and it will only run one. That's because the "elif" stands for "else if"; it is only considered if the condition from the previous if or elif statement is false.
+Now imagine a case where you want a user to input their age and you print a string like "You are a child", "You are in your teens", "You are in your twenties", "You are in your thirties", and so on. You want the program to print exactly one string for any given age, but there are more than two possible strings to print out, so a single if-else statement won't work on its own. In cases like this, you can use an if-elif-else statement. In an in-elif-else statement, the first condition that is true determines the code that the computer runs. Once one condition is true and the computer runs the code, the computer doesn't even look at the other conditions: it already found one, and it will only run one. That's because the "elif" stands for "else if"; it is only considered if the condition from the previous if or elif statement is false.
+</p>
+
+<p>
+In the exercise below, the program starts by testing <code>age</code> against the first condition. If <code>age</code> is less than 13, the program prints "You are a child" and doesn't look at any of the other conditions. If <code>age = 9</code> then it will print out "You are a child" and stop, because it won't look at the next conditional (<code>age &lt; 18</code>) unless the first condition is false. Play around with the value of <code>age</code> in the exercise below to understand how if-elif-else statements work.
 </p>
 
 <div data-datacamp-exercise data-lang="python">
 	<code data-type="sample-code">
-	age = 32 # Change this to see the different messages
+	def print_age(age):
+		if age < 13:
+			print("You are a child")
+		elif age < 18:
+			print("You are a teenager")
+		elif age < 20:
+			print("You are a young adult")
+		elif age < 30:
+			print("You are in your twenties")
+		elif age < 40:
+			print("You are in your thirties")
+		elif age < 50:
+			print("You are in your forties")
+		elif age < 60:
+			print("You are in your fifties")
+		elif age < 70:
+			print("You are in your sixties")
+		elif age < 80:
+			print("You are in your seventies")
+		else:
+			print("You are a senior citizen")
 
-	if age < 13:
-		print("You are a child")
-	elif age < 18:
-		print("You are a teenager")
-	elif age < 20:
-		print("You are a young adult")
-	elif age < 30:
-		print("You are in your twenties")
-	elif age < 40:
-		print("You are in your thirties")
-	elif age < 50:
-		print("You are in your forties")
-	elif age < 60:
-		print("You are in your fifties")
-	elif age < 70:
-		print("You are in your sixties")
-	elif age < 80:
-		print("You are in your seventies")
-	else:
-		print("You are a senior citizen")
+	print_age(32) # Change the input value to see the different messages
+	</code>
+</div>
+
+<h2>Nesting Conditionals</h2>
+
+<p>
+In the world of programming, <em>nesting</em> means putting a statement inside of a similar statement. For conditionals, you can put an if-else statement inside of another if-else statement. The example below shows such a case. If the username and password are correct, then the code inside that conditional tests another conditional: Is the user an adult or a minor? This is an example of a nested if-else statement or a nested conditional.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		age = 18
+		username = "bob"
+		password = "tomato"
+
+		if username == "bob" and password == "tomato":
+			if age >= 18:
+				print("Welcome, " + username + ". You are an adult.")
+			else:
+				print("Welcome, " + username + ". You are a minor.")
+		else:
+			print("Invalid username or password")
 	</code>
 </div>
 
 <p>
-TODO explain how in the code above, when age = 32 it meets the conditions for everything past age < 40, but an if-elif-else will stop checking after it finds the first true condition. 
+It's time for a challenge. In the exercise below, fill out the code for the function <code>at_stoplight</code>. The function takes two inputs: <code>color</code> and <code>direction</code>. The <code>color</code> can be "red", "green", or "yellow". The <code>direction</code> can be "left", "right", or "straight". Make the function follow the following rules:
 </p>
+<ul>
+	<li>If the color is "red" and the direction is "straight" or "left", return "stop"</li>
+	<li>If the color is "red" and the direction is "right", return "turn after stopping if traffic is clear"</li>
+	<li>If the color is "yellow", return "prepare to stop"</li>
+	<li>If the color is "green" and the direction is "straight" or "right", return "procede with caution"</li>
+	<li>If the color is "green" and the direction is "left", return "turn if traffic is clear"</li>
+	<li>If the color is not one of these three colors, return "error: invalid color"</li>
+</ul>
 
-<h2>Nesting Conditionals</h2>
-<p>
-TODO nesting (in functions, in other conditionals)
-</p>
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		# function at_stoplight
+		# input - color (red, green, yellow), direction (left, right, straight)
+		# return correct instructions
+		def at_stoplight (color, direction):
+			pass # delete this line and write your code
+
+		# tests (do not change)
+		print(at_stoplight("red", "left"))
+		print(at_stoplight("red", "right"))
+		print(at_stoplight("red", "straight"))
+		print(at_stoplight("green", "left"))
+		print(at_stoplight("green", "right"))
+		print(at_stoplight("green", "straight"))
+		print(at_stoplight("yellow", "left"))
+		print(at_stoplight("yellow", "right"))
+		print(at_stoplight("yellow", "straight"))
+	</code>
+	<code data-type="solution">
+		# function at_stoplight
+		# input - color (red, green, yellow), direction (left, right, straight)
+		# return - correct instructions
+		def at_stoplight (color, direction):
+			if color == "red":
+				if direction == "right":
+					return "turn after stopping if traffic is clear"
+				else:
+					return "stop"
+			elif color == "green":
+				if direction == "left":
+					return "turn if traffic is clear"
+				else:
+					return "procede with caution"
+			elif color == "yellow":
+				return "prepare to stop"
+			else:
+				return "error: invalid color"
+
+		# tests (do not change)
+		print(at_stoplight("red", "left"))
+		print(at_stoplight("red", "right"))
+		print(at_stoplight("red", "straight"))
+		print(at_stoplight("green", "left"))
+		print(at_stoplight("green", "right"))
+		print(at_stoplight("green", "straight"))
+		print(at_stoplight("yellow", "left"))
+		print(at_stoplight("yellow", "right"))
+		print(at_stoplight("yellow", "straight"))
+	</code>
+	<code data-type="sct">
+		test_output_contains("stop\nturn after stopping if traffic is clear\nstop\nturn if traffic is clear\nprocede with caution\nprocede with caution\nprepare to stop\nprepare to stop\nprepare to stop", False, "Incorrect output")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">
+		First use if-elif-else statements for the different colors (if color == "red", elif color == "green", elif color == "yellow", else). You may need to nest conditionals inside of those conditionals to deal with the direction.
+	</div>
+</div>

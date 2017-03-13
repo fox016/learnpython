@@ -1,8 +1,8 @@
 TODO
 
 - Step 7
-	- Challenge 4
-	- Challenge 5
-	- Challenge 6
-	- Challenge 7
-	- Challenge 8
+	- Challenge 4 (tic tac toe)
+	- Challenge 5 (gcd)
+	- Challenge 6 (kmer)
+	- Challenge 7 (decrypt key)
+	- Challenge 8 (boggle)

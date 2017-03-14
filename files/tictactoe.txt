@@ -1,0 +1,144 @@
+Board 1
+XX_
+___
+___
+Board 2
+X_X
+___
+___
+Board 3
+_XX
+___
+___
+Board 4
+X__
+X__
+___
+Board 5
+_X_
+X__
+___
+Board 6
+__X
+X__
+___
+Board 7
+X__
+_X_
+___
+Board 8
+_X_
+_X_
+___
+Board 9
+__X
+_X_
+___
+Board 10
+___
+XX_
+___
+Board 11
+X__
+__X
+___
+Board 12
+_X_
+__X
+___
+Board 13
+__X
+__X
+___
+Board 14
+___
+X_X
+___
+Board 15
+___
+_XX
+___
+Board 16
+X__
+___
+X__
+Board 17
+_X_
+___
+X__
+Board 18
+__X
+___
+X__
+Board 19
+___
+X__
+X__
+Board 20
+___
+_X_
+X__
+Board 21
+___
+__X
+X__
+Board 22
+X__
+___
+_X_
+Board 23
+_X_
+___
+_X_
+Board 24
+__X
+___
+_X_
+Board 25
+___
+X__
+_X_
+Board 26
+___
+_X_
+_X_
+Board 27
+___
+__X
+_X_
+Board 28
+___
+___
+XX_
+Board 29
+X__
+___
+__X
+Board 30
+_X_
+___
+__X
+Board 31
+__X
+___
+__X
+Board 32
+___
+X__
+__X
+Board 33
+___
+_X_
+__X
+Board 34
+___
+__X
+__X
+Board 35
+___
+___
+X_X
+Board 36
+___
+___
+_XX

@@ -6,7 +6,7 @@ DELETE FROM challenges;
 INSERT INTO challenge_sets VALUES ('math', 'Math Challenges', 1, 'Math challenges include problems in algebra, geometry, trigonometry, number theory, sequences, prime numbers, etc. Test your math skills and your coding skills combined!', now(), now());
 INSERT INTO challenge_sets VALUES ('puzzle', 'Puzzle Games', 2, 'These puzzle games will test your problem solving skills and will require coding skills like iteration and recursion. Plus, the solutions will help you improve your puzzle game skills!', now(), now());
 INSERT INTO challenge_sets VALUES ('security', 'Security', 3, 'Take a crack at cryptography and test basic skills for keeping digital data secure.', now(), now());
-INSERT INTO challenge_sets VALUES ('bioinformatics', 'Bioinformatics', 4, 'Bioinformatics is the intersection between biology and computer science. Bioinformatics problems are often related to processing genetic data represented by strings of characters with an alphabet of "ATCG" or "AUCG". Solving these types of problems help us to better understand the human genome and genetic disorders.', now(), now());
+INSERT INTO challenge_sets VALUES ('bioinformatics', 'Bioinformatics', 4, 'Bioinformatics is the intersection between biology and computer science. Bioinformatics problems are often related to processing genetic data represented by strings of characters with an alphabet of "ATCG" or "AUCG". Solving these types of problems helps us to better understand the human genome and genetic disorders.', now(), now());
 
 /* Initial challenge data */
 
@@ -20,7 +20,7 @@ INSERT INTO challenges VALUES ('tictactoe', 'Tic Tac Toe', 'puzzle', 1, 1, 'Tic 
 
 INSERT INTO challenges VALUES ('gcd', 'Greatest Common Divisor', 'math', 3, 2, 'TODO', 'TODO', now(), now());
 
-INSERT INTO challenges VALUES ('kmer', 'Most Frequent K-Mer', 'bioinformatics', 1, 1, 'TODO', 'TODO', now(), now());
+INSERT INTO challenges VALUES ('kmer', 'Most Frequent K-Mer', 'bioinformatics', 1, 1, 'DNA can be represented by long strings with the letters A, C, T, and G as the only characters. These DNA strings may seem random, but there are patterns that can help us to better understand genetic disorders. For this problem, you will write a function <code>most_frequent_kmer</code> that takes two arguments <code>dna</code> and <code>k</code>. The function returns the most frequently repeated substring of length <code>k</code> found in the string <code>dna</code>. Each substring of length <code>k</code> in a DNA string is known as a <em>kmer</em> or <em>k-mer</em>.<p>The file contains lines of the format <code>dna,k</code> (e.g., "AATCCGACGTCGATAGCATAACGATGGCGATTCGA,3"). The answer to each line in the file is the most frequent kmer for the given dna and k values. Each string of DNA is roughly 20,000 characters (in this case, <em>nucleotides</em>) long.</p><p>File: <a target="_blank" href="./files/kmer.txt">Download Here</a></p><p>Question: What is the string concatenation of the answers to all the most frequent kmers from the given file?</p><p>Hint: Use a dictionary to map kmers to their counts. Once the dictionary is created, iterate through it and keep track of the one with the highest count so far.</p>', 'GGGACCTGGCGCCTCTTTATTATCATACGGGACCACCCTCGA', now(), now());
 
 INSERT INTO challenges VALUES ('decryptkey', 'Crack Decryption Key', 'security', 1, 2, 'TODO', 'TODO', now(), now());
 

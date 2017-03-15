@@ -2,23 +2,7 @@ TODO
 
 - Step 7
 	x Challenge 4 (tic tac toe)
-	- Challenge 5 (gcd)
-		- file
-		- solution
+	x Challenge 5 (gcd)
 	x Challenge 6 (kmer)
 	- Challenge 7 (decrypt key)
 	- Challenge 8 (boggle)
-
-
-
-def gcd(a, b):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
-    if b > a:
-        return gcd(b, a)
-    return gcd(b, a % b)
-
-print(str(gcd(108, 48)))
-print(str(gcd(9823759873245674572938, 23897856)))

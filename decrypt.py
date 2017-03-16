@@ -1,8 +1,8 @@
 
-def encrypt(secret, key):
+def encrypt(text, key):
 	cipher = ""
-	for i in range(0, len(secret)):
-		x = ord(secret[i])
+	for i in range(0, len(text)):
+		x = ord(text[i])
 		y = ord(key[i%len(key)])
 		if y % 4 == 0:
 			d = x + 3
@@ -37,11 +37,11 @@ key = "platypus"
 cipher = encrypt(secret, key)
 text = decrypt(cipher, key)
 
-# print decrypt("Mrlq$4>7#0$Lr#xnh#fhklrtlqk#{dw&wki#[rvj/#eqh#xnh#[rvg$}dv$zmwl&Jrh/$drj#wlh$Zsxg#{dw#Kug1", "platypus")
+print decrypt("Mrlq$4>7#0$Lr#xnh#fhklrtlqk#{dw&wki#[rvj/#eqh#xnh#[rvg$}dv$zmwl&Jrh/$drj#wlh$Zsxg#{dw#Kug1", key)
 
 for word in open("files/dictionary.txt"):
-	text = decrypt(cipher, word)
+	text = decrypt(cipher, word[:-1])
 	if word == "platypus":
 		print word, text
-	if text.find("In the beg") > 0:
+	if text.find(" the ") > 0 and text.find(" and ") > 0:
 		print word, text

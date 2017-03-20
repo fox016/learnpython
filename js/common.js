@@ -30,6 +30,8 @@ $(document).ready(function()
 
 	// Datacamp instructions
 	$("div[data-lang='python']").before("<div class='datacampInstructions'>Hit Ctrl-L (Command-L on Mac) to clear right console.</div>");
+
+	$("#challenge_file").unbind('change').change(handleFileSelect);
 });
 
 // Trigger resize once window is completely done loading
@@ -202,4 +204,59 @@ function submitAnswer(form)
 	});
 
 	return false;
+}
+
+/*
+ * Submit solution file for a challenge
+ */
+function uploadSolutionFile()
+{
+	var userid = getCookie('userid');
+	if(userid === null)
+	{
+		myAlert("You cannot submit an answer without logging in");
+		return false;
+	}
+
+	var challengeId = $("#challenge_id").val();
+	var fileForm = new FormData();
+	fileForm.append("file", selected_file);
+	fileForm.append("challengeId", challengeId);
+
+	$("#correctDiv").hide();
+	$("#incorrectDiv").hide();
+	$.ajax({
+		type: "POST",
+		dataType: "json",
+		url: "ajax/uploadSolutionFile.php",
+		data: fileForm,
+		processData: false,
+		contentType: false,
+		success: function(response)
+		{
+			if(response.correct)
+			{
+				$("#correctDiv").show();
+			}
+			else
+			{
+				$("#badGuess").html("<code>" + form.solution.value + "</code>");
+				$("#incorrectDiv").show();
+			}
+		},
+		error: function(xhr) {
+			myAlert("Error submitting answer: " + xhr.responseText);
+		},
+	});
+
+	return false;
+}
+
+/*
+ * Handle file upload select
+ */
+var selected_file = null;
+function handleFileSelect(evt)
+{
+	selected_file = evt.target.files[0];
 }

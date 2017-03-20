@@ -22,6 +22,12 @@
 	</p>
 <?php } ?>
 
+<form name='solutionForm' id='solutionForm' onsubmit='return false;'>
+	<input type=hidden name='challenge_id' id='challenge_id' value='<?php echo $challenge['id'];?>'>
+	<input type=file name='challenge_file' id='challenge_file' required>
+	<div><button type='button' onclick='uploadSolutionFile()'>Submit Solution File</button></div>
+</form>
+
 <div data-datacamp-exercise data-lang="python">
 	<?php if($challenge['completed_date_time'] !== null && $challenge['code'] !== null) { ?>
 	<code data-type="sample-code">

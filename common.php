@@ -258,3 +258,17 @@ function getVal($array, $index, $default="")
 		return $array[$index];
 	return $default;
 }
+
+/*
+ * Return error data for incorrect challenge solution
+ */
+function returnError($test, $solution, $output, $message="Error")
+{
+	die(json_encode(array(
+		"correct" => false,
+		"test" => $test,
+		"solution" => $solution,
+		"output" => $output,
+		"message" => $message
+	)));
+}

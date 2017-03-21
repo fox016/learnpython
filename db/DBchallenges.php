@@ -6,6 +6,7 @@ require_once(__DIR__ . "/../../util/util-logging.php");
 class DBchallenges
 {
 	private $dbh;
+	private $error;
 
 	public function __construct()
 	{
@@ -21,6 +22,12 @@ class DBchallenges
 	public function rollback()
 	{
 		$this->dbh->rollBack();
+	}
+
+	public function returnError($message="")
+	{
+		$this->rollback();
+		throw new Exception("$message: SQL Error Code: {$this->error[0]}, MySQL Error Code: {$this->error[1]}, Error: {$this->error[2]}");
 	}
 
 	public function getChallengeSets()
@@ -102,9 +109,10 @@ class DBchallenges
 
 	public function markChallengeComplete($userid, $challengeId)
 	{
-		$sql = "INSERT INTO user_challenges (user_id, challenge_id, completed_date_time) VALUES (?, ?, now())";
+		$sql = "INSERT INTO user_challenges (user_id, challenge_id, completed_date_time) VALUES (?, ?, now()) ON DUPLICATE KEY UPDATE completed_date_time=now()";
 		$stmt = $this->dbh->prepare($sql);
 		$success = $stmt->execute(array($userid, $challengeId));
+		$this->error = $stmt->errorInfo();
                 return $stmt->errorCode();
 	}
 
@@ -113,6 +121,7 @@ class DBchallenges
 		$sql = "UPDATE user_challenges SET code=? WHERE user_id=? AND challenge_id=?";
 		$stmt = $this->dbh->prepare($sql);
 		$success = $stmt->execute(array($code, $userid, $challengeId));
+		$this->error = $stmt->errorInfo();
                 return $stmt->errorCode();
 	}
 
@@ -139,6 +148,7 @@ class DBchallenges
                 $values = array_values($data);
                 $values[] = $idObj['value'];
                 $result = $stmt->execute($values);
+		$this->error = $stmt->errorInfo();
                 return $stmt->errorCode();
         }
 }

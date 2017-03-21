@@ -240,7 +240,12 @@ function uploadSolutionFile()
 			}
 			else
 			{
-				$("#badGuess").html("<code>" + form.solution.value + "</code>");
+				var errorMessage = response.message + ": ";
+				if(response.test && response.solution)
+					errorMessage += "<br/>Test: " + response.test + "<br/>Expected: " + response.solution;
+				if(response.output)
+					errorMessage += "<br/>Your Output: " + response.output;
+				$("#incorrectMessage").html(errorMessage);
 				$("#incorrectDiv").show();
 			}
 		},

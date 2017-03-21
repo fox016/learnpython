@@ -25,8 +25,8 @@ try
 	$testCode = file_get_contents("../challenges/$challengeId.py");
 	file_put_contents($pyFile, $testCode, FILE_APPEND | LOCK_EX);
 
-	// Execute Python file
-	$command = "python $pyFile > $outfile";
+	// Execute Python file (with timer)
+	$command = "timeout 30 python $pyFile > $outfile";
 	system($command, $result);
 	$output = file_get_contents($outfile);
 	
@@ -58,35 +58,6 @@ try
 		$db->returnError("Error updating code");
 	$db->commit();
 	echo json_encode(array("correct" => true));
-/*
-	// TODO fork for timer (run python process in background, kill background process when timer runs out)
-
-	$parent_pid = null;
-	$child_pid = null;
-
-	$pid = pcntl_fork();
-	if($pid == -1)
-		throw new Exception("Failed to start timer");
-	else if($pid) // Parent
-	{
-		$parent_pid = posix_getpid();
-		for($i = 0; $i < 40; $i++)
-		{
-			sleep(1);
-			echo "$i\n";
-		}
-		posix_kill($child_pid, SIGTERM);
-	}
-	else // Child
-	{
-		$child_pid = posix_getpid();
-		sleep(10);
-		posix_kill($parent_pid, SIGTERM);
-		die("Time's up");
-	}
-
-	echo json_encode(array("correct" => true));
-*/
 }
 catch(Exception $e)
 {

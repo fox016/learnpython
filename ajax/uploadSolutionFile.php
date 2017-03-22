@@ -15,7 +15,7 @@ try
 	// Blacklist Python code
 	$blacklist = array(
 		"/mysql/i", "/natefoxc/i", "/subprocess/i", "/learnpython/i", "/popen/i", "/from commands/i", "/import commands/i", "/spawn/i", "/os.system/i",
-		"/open\(.*,.*\)/i", "http/i"
+		"/open\(.*,.*\)/i", "/http/i"
 	);
 	foreach($blacklist as $regex)
 	{

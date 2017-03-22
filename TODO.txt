@@ -1,1 +1,18 @@
 TODO
+
+Week 8
+	x Upload Python files
+	x Timer
+	x Security (code blacklist)
+Week 9
+	x Convert kmer
+	x Convert cone area
+	x Convert fib
+	- Convert tic tac toe
+	- Convert sudoku
+	- Convert boggle
+	- Convert decrypt key
+	x Convert gcd
+	- Convert DB
+	- Convert Template
+	- Allow option to upload from Python editor (?)

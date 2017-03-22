@@ -8,8 +8,8 @@ Week 9
 	x Convert kmer
 	x Convert cone area
 	x Convert fib
-	- Convert tic tac toe
-	- Convert sudoku
+	x Convert tic tac toe
+	x Convert sudoku
 	- Convert boggle
 	- Convert decrypt key
 	x Convert gcd

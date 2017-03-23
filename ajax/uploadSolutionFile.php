@@ -7,19 +7,16 @@ try
 	$userid = getCookie('userid');
 
 	// Get file from browser
-	if(isset($_FILES['file']))
-	{
-		$file = $_FILES['file'];
-		$filename = $file['name'];
-		if(substr($filename,-3) != ".py")
-			returnError(NULL, NULL, NULL, "Only Python (.py) files accepted");
-		$tmpName = $file['tmp_name'];
-		$userPython = file_get_contents($tmpName);
-	}
+	$file = $_FILES['file'];
+	$filename = $file['name'];
+	if(substr($filename,-3) != ".py")
+		returnError(NULL, NULL, NULL, "Only Python (.py) files accepted");
+	$tmpName = $file['tmp_name'];
+	$userPython = file_get_contents($tmpName);
 
 	// Blacklist Python code
 	$blacklist = array(
-		"/mysql/i", "/natefoxc/i", "/subprocess/i", "/learnpython/i", "/popen/i", "/from commands/i", "/import commands/i", "/spawn/i", "/os.system/i",
+		"/mysql/i", "/natefox/i", "/subprocess/i", "/learnpython/i", "/popen/i", "/from commands/i", "/import commands/i", "/spawn/i", "/os.system/i",
 		"/open\(.*,.*\)/i", "/http/i"
 	);
 	foreach($blacklist as $regex)

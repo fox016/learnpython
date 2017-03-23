@@ -1,0 +1,6 @@
+print(cone_area(2938, 761))
+print(cone_area(3963, 296))
+print(cone_area(2100, 100))
+print(cone_area(314159, 314))
+print(cone_area(2, 1))
+print(cone_area(4, 3))

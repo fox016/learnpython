@@ -168,45 +168,6 @@ function hasCookies()
 }
 
 /*
- * Submit answer to challenge
- */
-function submitAnswer(form)
-{
-	var userid = getCookie('userid');
-	if(userid === null)
-	{
-		myAlert("You cannot submit an answer without logging in");
-		return false;
-	}
-
-	$("#correctDiv").hide();
-	$("#incorrectDiv").hide();
-	$.ajax({
-		type: "POST",
-		dataType: "json",
-		url: "ajax/submitAnswer.php",
-		data: $(form).serialize(),
-		success: function(response)
-		{
-			if(response.correct)
-			{
-				$("#correctDiv").show();
-			}
-			else
-			{
-				$("#badGuess").html("<code>" + form.solution.value + "</code>");
-				$("#incorrectDiv").show();
-			}
-		},
-		error: function(xhr) {
-			myAlert("Error submitting answer: " + xhr.responseText);
-		},
-	});
-
-	return false;
-}
-
-/*
  * Submit solution file for a challenge
  */
 function uploadSolutionFile()
@@ -220,8 +181,8 @@ function uploadSolutionFile()
 
 	var challengeId = $("#challenge_id").val();
 	var fileForm = new FormData();
-	fileForm.append("file", selected_file);
 	fileForm.append("challengeId", challengeId);
+	fileForm.append("file", selected_file);
 
 	$("#correctDiv").hide();
 	$("#incorrectDiv").hide();

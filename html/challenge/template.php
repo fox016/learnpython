@@ -6,7 +6,6 @@
 
 <?php if($challenge['completed_date_time'] !== null) { ?>
 	<p>
-		Answer: <?php echo $challenge['solution'];?><br/>
 		Solved: <?php echo formatDate($challenge['completed_date_time']);?><br/>
 		<a target='_blank' href='/learnpython/?forum=<?php echo $challenge['id'];?>'>View Forum</a>
 	</p>
@@ -15,18 +14,15 @@
 <p>
 	<div id='correctDiv'><strong>Correct!</strong> Share your code on the <a target='_blank' href='/learnpython/?forum=<?php echo $challenge['id'];?>'>forum</a></div>
 	<div id='incorrectDiv'><strong>Incorrect</strong>, <span id='incorrectMessage'></span></div>
-	<form onsubmit='return submitAnswer(this);'>
+</p>
+<p>
+	Upload your code in a Python file (extension .py) here
+	<form name='solutionForm' id='solutionForm' onsubmit='return false;'>
 		<input type=hidden name='challenge_id' id='challenge_id' value='<?php echo $challenge['id'];?>'>
-		<label for='solution'>Answer:&nbsp;</label><input type=text size='75' name='solution' id='solution' value=''>
-		<input type='submit' value='Submit'>
+		<input type=file class='fileBtn' name='challenge_file' id='challenge_file' required>
+		<div><button class='fileBtn' type='button' onclick='uploadSolutionFile()'>Submit Solution File</button></div>
 	</form>
 </p>
-
-<form name='solutionForm' id='solutionForm' onsubmit='return false;'>
-	<input type=hidden name='challenge_id' id='challenge_id' value='<?php echo $challenge['id'];?>'>
-	<input type=file name='challenge_file' id='challenge_file' required>
-	<div><button type='button' onclick='uploadSolutionFile()'>Submit Solution File</button></div>
-</form>
 
 <div data-datacamp-exercise data-lang="python">
 	<?php if($challenge['completed_date_time'] !== null && $challenge['code'] !== null) { ?>
@@ -35,4 +31,3 @@
 	</code>
 	<?php } ?>
 </div>
-

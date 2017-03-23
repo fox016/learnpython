@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS challenges
 	position INTEGER NOT NULL,
 	difficulty INTEGER DEFAULT 1,
 	description TEXT NOT NULL,
-	solution VARCHAR(4000) NOT NULL,
 	created_date_time DATETIME NOT NULL,
 	updated_date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY(id)

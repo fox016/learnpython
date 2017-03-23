@@ -13,6 +13,6 @@ Week 9
 	- Convert boggle
 	- Convert decrypt key
 	x Convert gcd
-	- Convert DB
-	- Convert Template
-	- Allow option to upload from Python editor (?)
+	x Convert DB
+	x Convert Template
+	x Only accept .py files

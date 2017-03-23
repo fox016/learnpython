@@ -7,10 +7,15 @@ try
 	$userid = getCookie('userid');
 
 	// Get file from browser
-	$file = $_FILES['file'];
-	$filename = $file['name'];
-	$tmpName = $file['tmp_name'];
-	$userPython = file_get_contents($tmpName);
+	if(isset($_FILES['file']))
+	{
+		$file = $_FILES['file'];
+		$filename = $file['name'];
+		if(substr($filename,-3) != ".py")
+			returnError(NULL, NULL, NULL, "Only Python (.py) files accepted");
+		$tmpName = $file['tmp_name'];
+		$userPython = file_get_contents($tmpName);
+	}
 
 	// Blacklist Python code
 	$blacklist = array(

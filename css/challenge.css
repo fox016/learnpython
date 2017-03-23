@@ -93,9 +93,26 @@ h2.challengeName {
 }
 .forumCode {
 	width:100%;
-	border:2px solid #777;
 	height:100px;
+	border:1px solid #bbb;
+	padding:10px;
 }
 #codeInput {
+	width:100%;
+	border:2px solid #777;
+	height:100px;
 	margin-top:20px;
+	padding:10px;
+}
+#processingDisplay {
+	display:none;
+}
+.fileBtn {
+	color:#fff;
+	border:0;
+	font-size:1em;
+	background:#3774a7;
+	padding:4px 11px 5px;
+	cursor:pointer;
+	margin:5px 0;
 }

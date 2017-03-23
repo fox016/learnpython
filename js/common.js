@@ -186,6 +186,8 @@ function uploadSolutionFile()
 
 	$("#correctDiv").hide();
 	$("#incorrectDiv").hide();
+	$(".fileBtn").attr('disabled', 'disabled');
+	$("#processingDisplay").show();
 	$.ajax({
 		type: "POST",
 		dataType: "json",
@@ -195,6 +197,8 @@ function uploadSolutionFile()
 		contentType: false,
 		success: function(response)
 		{
+			$(".fileBtn").removeAttr('disabled');
+			$("#processingDisplay").hide();
 			if(response.correct)
 			{
 				$("#correctDiv").show();
@@ -210,7 +214,10 @@ function uploadSolutionFile()
 				$("#incorrectDiv").show();
 			}
 		},
-		error: function(xhr) {
+		error: function(xhr)
+		{
+			$(".fileBtn").removeAttr('disabled');
+			$("#processingDisplay").hide();
 			myAlert("Error submitting answer: " + xhr.responseText);
 		},
 	});

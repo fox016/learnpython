@@ -16,7 +16,8 @@ Week 9
 	x Convert DB
 	x Convert Template
 	x Only accept .py files
-	- For longer challenges (e.g., sudoku, decryptkey) show processing symbol while server is processing solution file
+	x For longer challenges (e.g., sudoku, decryptkey) show processing symbol while server is processing solution file
+	x Fix forum UI
 
 Solution for opening dictionary file:
 - User defines a variable named dictionary_file that is a string path to their dictionary file. They are then allowed to use "open(dictionary_file)" and that is the only allowed open command (blacklist every other open command on server end). On the server I replace the instantiation of the dictionary_file variable with a path to my own dictionary file.

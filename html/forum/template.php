@@ -30,7 +30,7 @@
 
 	<form onsubmit='return submitCode(this);'>
 		<input type='hidden' name='challengeId' id='challengeId' value='<?php echo $challenge['id'];?>'>
-		<div><textarea id='codeInput' name='codeInput' class='forumCode' placeholder='Submit your code here'><?php echo $challenge['code'];?></textarea></div>
-		<div><input type='submit' value='Submit Code'></div>
+		<div><textarea id='codeInput' name='codeInput' placeholder='Submit your code here'><?php echo $challenge['code'];?></textarea></div>
+		<div><input class='fileBtn' type='submit' value='Submit Code'></div>
 	</form>
 <?php } ?>

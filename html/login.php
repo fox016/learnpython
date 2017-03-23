@@ -1,4 +1,4 @@
-<link rel='stylesheet' type='text/css' href='css/challenge.css' />
+<link rel='stylesheet' type='text/css' href='css/challenge.css?v2' />
 
 <!-- If signed in -->
 <div id='displayUserHeader' <?php if(!isset($userid)) { ?> style='display:none !important;' <?php } ?>>

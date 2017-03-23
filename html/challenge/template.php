@@ -21,6 +21,7 @@
 		<input type=hidden name='challenge_id' id='challenge_id' value='<?php echo $challenge['id'];?>'>
 		<input type=file class='fileBtn' name='challenge_file' id='challenge_file' required>
 		<div><button class='fileBtn' type='button' onclick='uploadSolutionFile()'>Submit Solution File</button></div>
+		<div id='processingDisplay'><img src='images/small-loader.gif'>&nbsp;Processing ...</div>
 	</form>
 </p>
 

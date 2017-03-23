@@ -14,8 +14,8 @@
 -->
 	<script src="jqueryui/jquery-ui.js"></script>
 
-	<script src="js/myAlert.js?v3"></script>
-	<script src="js/common.js?v3"></script>
+	<script src="js/myAlert.js?v4"></script>
+	<script src="js/common.js?v4"></script>
 
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 	<link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">

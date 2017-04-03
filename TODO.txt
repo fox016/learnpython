@@ -1,23 +1,11 @@
 TODO
 
-Week 8
-	x Upload Python files
-	x Timer
-	x Security (code blacklist)
-Week 9
-	x Convert kmer
-	x Convert cone area
-	x Convert fib
-	x Convert tic tac toe
-	x Convert sudoku
-	- Convert boggle
-	x Convert decrypt key
-	x Convert gcd
-	x Convert DB
-	x Convert Template
-	x Only accept .py files
-	x For longer challenges (e.g., sudoku, decryptkey) show processing symbol while server is processing solution file
-	x Fix forum UI
-
-Solution for opening dictionary file:
-- User defines a variable named dictionary_file that is a string path to their dictionary file. They are then allowed to use "open(dictionary_file)" and that is the only allowed open command (blacklist every other open command on server end). On the server I replace the instantiation of the dictionary_file variable with a path to my own dictionary file.
+Week 10
+	x Fix boggle UI
+		x Change description in UI (remove board file download, talk about how to loop through dictionary, need boggle_score(board_string) function to take a 25-char string and return the score for the board, etc.)
+	- 1 new chapter (chapter 9 - lists)
+	- 2 new challenges
+	- Save every challenge submission in DB for data mining
+Week 11
+	- 1 new chapter
+	- 2 new challenges

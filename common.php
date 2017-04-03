@@ -21,6 +21,7 @@ function buildChapterList()
 	$chapterManager->addChapter("conditionals", "Conditionals");
 	$chapterManager->addChapter("errors", "Fixing Errors");
 	$chapterManager->addChapter("lists", "Lists");
+/*
 	$chapterManager->addChapter("iteration", "Loops");
 	$chapterManager->addChapter("install", "Install Python");
 	$chapterManager->addChapter("fileio", "File I/O");
@@ -34,6 +35,7 @@ function buildChapterList()
 	$chapterManager->addChapter("hof", "High Order Functions");
 	$chapterManager->addChapter("comprehensions", "List Comprehensions");
 	$chapterManager->addChapter("generators", "Generators");
+*/
 }
 
 /*

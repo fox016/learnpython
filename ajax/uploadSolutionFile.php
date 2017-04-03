@@ -40,7 +40,7 @@ try
 	file_put_contents($pyFile, $testCode, FILE_APPEND | LOCK_EX);
 
 	// Execute Python file (with timer)
-	$command = "timeout 45 python $pyFile &> $outfile";
+	$command = "timeout 30 python $pyFile &> $outfile";
 	system($command, $result);
 	$output = file_get_contents($outfile);
 	

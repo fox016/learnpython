@@ -72,6 +72,7 @@ The last code block uses syntax like <code>names[0]</code>. You might remember s
 		<tr><td><em>list</em>.remove(<em>value</em>)</td><td>Removes the first instance of <em>value</em> from <em>list</em></td></tr>
 		<tr><td><em>list</em>.pop()</td><td>Removes the last value from <em>list</em> and returns that value</td></tr>
 		<tr><td><em>list</em>.index(<em>value</em>)</td><td>Returns the index of the first instance of <em>value</em>, does not change <em>list</em></td></tr>
+		<tr><td>len(<em>list</em>)</td><td>Returns the total number of values in <em>list</em>, does not change <em>list</em></td></tr>
 		<tr><td><em>list</em>.count(<em>value</em>)</td><td>Returns the number of times <em>value</em> is found in <em>list</em>, does not change <em>list</em></td></tr>
 		<tr><td><em>list</em>.sort()</td><td>Sorts the items in <em>list</em></td></tr>
 		<tr><td><em>list</em>.reverse()</td><td>Reverses the order of the items in <em>list</em></td></tr>
@@ -137,7 +138,51 @@ The last code block uses syntax like <code>names[0]</code>. You might remember s
 
 
 <h2>Splitting Lists (Sublists)</h2>
-TODO
+
+<p>
+In Python, splitting lists is done in the same way as splitting strings into substrings. You can review the <a target="_blank" href="./?chapter=strings">chapter on strings</a> for a more detailed explanation. Python uses some of the same syntax for lists and strings because strings, in a way, are really just lists of characters. The syntax is
+</p>
+
+<p>
+<code>
+sublist = list_name[ <em>start_index(inclusive)</em> : <em>end_index(exclusive)</em> ]
+</code>
+</p>
+
+<p>
+Use the exercise below to experiment with splitting lists
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+		warm_colors = colors[0:3]
+		cool_colors = colors[3:len(colors)]
+		fav_colors = colors[3:5]
+		fav_colors.append("teal")
+
+		print(colors)
+		print(warm_colors)
+		print(cool_colors)
+		print(fav_colors)
+	</code>
+</div>
 
 <h2>Range Function</h2>
+
+<p>
+The <code>range</code> function in Python can be used as a shortcut to generate a list of numbers. This is a very useful function and will show up in later chapters. There are three different ways to call the <code>range</code> function:
+</p>
+
+<pre><code>range(10) # Creates a list from 0 to 9
+range(5, 10) # Creates a list from 5 to 9
+range(10, 100, 2) # Creates a list of all even numbers from 10 to 98</code></pre>
+
+<p>
+The first example defines an exclusive ending point. The list starts at 0 and includes every number less than the ending point. The second defines an inclusive starting point and an exclusive ending point. The third defines an inclusive starting point, an exclusive ending point, and an interval between every adjacent number in the list. Use the exercise below to experiment with the <code>range</code> function. You will want to be very familiar with it; it will help a lot as you continue to learn Python.
+</p>
+
+TODO - range exercise
+
+<h2>Review</h2>
 TODO

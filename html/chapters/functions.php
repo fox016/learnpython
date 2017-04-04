@@ -61,15 +61,11 @@ To start defining a function in Python, use the following syntax: <code>def <em>
 We have the function name and the input, now we need to define the process of the function, also known as the <em>body</em> of the function. In Python, the process starts on the next line of code, and every line of code in the process is tabbed in once. The process can access the input data by referring to the names of the input variables. Our process may look something like this:
 </p>
 
-<div data-datacamp-exercise data-lang="python">
-	<code data-type="sample-code">
-	def calculate_pizza_cost(size, price):
-		pi = 3.14159
-		r = size / 2.0
-		area = pi * r**2
-		cost = int(price / area * 1000)/1000.0
-	</code>
-</div>
+<pre><code>def calculate_pizza_cost(size, price):
+	pi = 3.14159
+	r = size / 2.0
+	area = pi * r**2
+	cost = int(price / area * 1000)/1000.0</code></pre>
 
 <p>
 Notice that the process refers to both <code>size</code> and <code>price</code>. The function itself doesn't know the specific values of <code>size</code> and <code>price</code>, those are variables that are passed in from the outside when the function is called. Just like the <code>len</code> function works on any string you pass in as input, our function will work on any values of size and price that are passed in when the function is called.
@@ -78,16 +74,12 @@ Notice that the process refers to both <code>size</code> and <code>price</code>.
 <p>Now we have the name, the input, and the process. We now need to return output. We want to return the cost, which in this case is stored in the variable named <code>cost</code>. We do this using the syntax <code>return cost</code>:
 </p>
 
-<div data-datacamp-exercise data-lang="python">
-	<code data-type="sample-code">
-	def calculate_pizza_cost(size, price):
-		pi = 3.14159
-		r = size / 2.0
-		area = pi * r**2
-		cost = int(price / area * 1000)/1000.0
-		return cost
-	</code>
-</div>
+<pre><code>def calculate_pizza_cost(size, price):
+	pi = 3.14159
+	r = size / 2.0
+	area = pi * r**2
+	cost = int(price / area * 1000)/1000.0
+	return cost</code></pre>
 
 <p>
 Now we have a function that takes a size and price as input and returns the cost per square inch of the pizza. Now that we have a function, we need to call the function from the outside and pass in the input values. The values that get passed into the function will define the values of the <code>size</code> and <code>price</code> values in the function body:
@@ -180,12 +172,12 @@ Now you may realize that we don't even need the variables for all the sizes and 
 	print_cost(16, 11.25)
 	print_cost(20, 15.25)
 
-	print_cost(40, 30.00)
+	print_cost(40, 40.00)
 	</code>
 </div>
 
 <p>
-That code looks way better! And now if the pizza place decides to add another pizza size (like a 40-inch pizza for $30.00), the only code you have to change is to add one line that calls the <code>print_cost</code> function with the values for the new size and the associated price. Behold, the power of functions!
+That code looks way better! And now if the pizza place decides to add another pizza size (like a 40-inch pizza for $40.00), the only code you have to change is to add one line that calls the <code>print_cost</code> function with the values for the new size and the associated price. Behold, the power of functions!
 </p>
 
 <p>

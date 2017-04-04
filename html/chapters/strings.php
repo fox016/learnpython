@@ -9,13 +9,13 @@ A string is a list of symbols. In the world of computing, these symbols are comm
 </p>
 
 <p>
-<code>name = "Bob the Builder"</code><br/>
-<code>occupation = "Builder"</code><br/>
-<code>salary = "$35,000"</code><br/>
-<code>phone = "(123) 456-7890"</code><br/>
-<code>email = "builder_bob@nowhere.net"</code><br/>
-<code>phrase = "Let's build it!"</code><br/>
-<code>favorite_quote = '"One small step for man; one giant leap for for mankind." - Neal Armstrong'</code><br/>
+<pre><code>name = "Bob the Builder"
+occupation = "Builder"
+salary = "$35,000"
+phone = "(123) 456-7890"
+email = "builder_bob@nowhere.net"
+phrase = "Let's build it!"
+favorite_quote = '"One small step for man; one giant leap for for mankind." - Neal Armstrong'</code></pre>
 </p>
 
 <p>
@@ -117,10 +117,9 @@ Strings use 0-based indexing. The "T" in "The" is at index 0. The "h" is at inde
 <p>
 That might look a little intimidating at first, so let's break it down. After the opening bracket ([), insert the start index of the first character to include. In our example, that index is 10. Then put a colon (:). After the colon, insert the index of the first character to exclude. In our example, we want to include up to index 16, so the first character to exclude is at index 17:
 </p>
-<p>
-<code>fox_string = "The quick red fox jumped over the lazy brown dogs."</code><br/>
-<code>substring = fox_string[10:17]</code><br/>
-<code>print(substring) # This prints out "red fox"</code><br/>
+<p><pre><code>fox_string = "The quick red fox jumped over the lazy brown dogs."
+substring = fox_string[10:17]
+print(substring) # This prints out "red fox"</code></pre>
 </p>
 
 <p>

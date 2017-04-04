@@ -101,7 +101,7 @@ Other semantic errors may be caused by typos. You might want to do <code>a * b</
 </p>
 
 <p>
-Semantic errors can be tricky to find, but are usually easy to fix once found. Here are some tips for finding syntax errors:
+Semantic errors can be tricky to find, but are usually easy to fix once found. Here are some tips for finding semantic errors:
 </p>
 
 <ul>

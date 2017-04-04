@@ -203,6 +203,14 @@ code {
 	padding:1px 6px;
 	border-radius:5px;
 }
+pre {
+	background-color:#d5dfe9;
+	border-radius:5px;
+	padding:0 10px;
+}
+pre code {
+	padding:0 !important;
+}
 .datacampInstructions {
 	text-align:right;
 	color:#777;

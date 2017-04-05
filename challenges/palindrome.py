@@ -1,0 +1,8 @@
+print(palindrome_test("abcbz"))
+print(palindrome_test("abcza"))
+print(palindrome_test("abcdcba"))
+print(palindrome_test("abcdba"))
+print(palindrome_test("abccba"))
+print(palindrome_test("racecar"))
+print(palindrome_test("able was i ere i saw elba"))
+print(palindrome_test("able i was ere i saw elba"))

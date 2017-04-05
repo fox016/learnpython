@@ -1,0 +1,6 @@
+print(reverse_word("My name is Santa"))
+print(reverse_word("You are my favorite person"))
+print(reverse_word("I love one letter words like a"))
+print(reverse_word("you love you"))
+print(reverse_word("test this this test"))
+print(reverse_word("sense more makes it order reverse in this read i when"))

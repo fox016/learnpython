@@ -174,15 +174,105 @@ Use the exercise below to experiment with splitting lists
 The <code>range</code> function in Python can be used as a shortcut to generate a list of numbers. This is a very useful function and will show up in later chapters. There are three different ways to call the <code>range</code> function:
 </p>
 
-<pre><code>range(10) # Creates a list from 0 to 9
-range(5, 10) # Creates a list from 5 to 9
-range(10, 100, 2) # Creates a list of all even numbers from 10 to 98</code></pre>
+<pre><code>range(10) # Returns a list from 0 to 9
+range(5, 10) # Returns a list from 5 to 9
+range(10, 100, 2) # Returns a list of all even numbers from 10 to 98</code></pre>
 
 <p>
 The first example defines an exclusive ending point. The list starts at 0 and includes every number less than the ending point. The second defines an inclusive starting point and an exclusive ending point. The third defines an inclusive starting point, an exclusive ending point, and an interval between every adjacent number in the list. Use the exercise below to experiment with the <code>range</code> function. You will want to be very familiar with it; it will help a lot as you continue to learn Python.
 </p>
 
-TODO - range exercise
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+		indexes = range(1) # Change to be a list of 0 to 10 (inclusive)
+		dice = range(1) # Change to be a list of 1 to 6 (inclusive)
+		fives = range(1) # Change to be a list of all multiples of 5 from 5 to 100 (inclusive)
+
+		# Don't change these print statements
+		print(", ".join(map(str, indexes)))
+		print(", ".join(map(str, dice)))
+		print(", ".join(map(str, fives)))
+	</code>
+	<code data-type="solution">
+		indexes = range(11) # Change to be a list of 0 to 10 (inclusive)
+		dice = range(1, 7) # Change to be a list of 1 to 6 (inclusive)
+		fives = range(5, 101, 5) # Change to be a list of all multiples of 5 from 5 to 100 (inclusive)
+
+		# Don't change these print statements
+		print(", ".join(map(str, indexes)))
+		print(", ".join(map(str, dice)))
+		print(", ".join(map(str, fives)))
+	</code>
+	<code data-type="sct">
+		test_object("indexes")
+		test_object("dice")
+		test_object("fives")
+		success_msg("Great job!")
+	</code>
+	<div data-type="hint">
+		<ul>
+			<li>For indexes, input one parameter</li>
+			<li>For dice, input two parameters</li>
+			<li>For fives, input three parameters</li>
+		</ul>
+	</div>
+</div>
 
 <h2>Review</h2>
-TODO
+
+<p>
+For this exercise, there are 2 hidden lists: <code>cities</code> and <code>states</code>. Follow the instructions in the comments to manipulate these lists and print the values.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="pre-exercise-code">
+		cities = ["Salem", "Salt Lake City", "Houston", "Miami", "San Diego"]
+		states = ["MA", "UT", "TX", "FL", "CA"]
+	</code>
+	<code data-type="sample-code">
+		def print_city(city, state):
+			print(city + ", " + state)
+
+		# Append "Chicago" to cities and "IL" to states
+
+		# Insert "Atlanta" into cities at index 2
+
+		# Insert "GA" into states at index 2
+
+		# Remove "Salem" from cities and "MA" from states
+
+		# Call the print_city function on all 6 values in cities and states
+	</code>
+	<code data-type="solution">
+		def print_city(city, state):
+			print(city + ", " + state)
+
+		# Append "Chicago" to cities and "IL" to states
+		cities.append("Chicago")
+		states.append("IL")
+
+		# Insert "Atlanta" into cities at index 2
+		# Insert "GA" into states at index 2
+		cities.insert(2, "Atlanta")
+		states.insert(2, "GA")
+
+		# Remove "Salem" from cities and "MA" from states
+		cities.remove("Salem")
+		states.remove("MA")
+
+		# Call the print_city function on all 6 values in cities and states
+		print_city(cities[0], states[0])
+		print_city(cities[1], states[1])
+		print_city(cities[2], states[2])
+		print_city(cities[3], states[3])
+		print_city(cities[4], states[4])
+		print_city(cities[5], states[5])
+	</code>
+	<code data-type="sct">
+		test_object("cities")
+		test_object("states")
+	</code>
+	<div data-type="hint">
+		Use functions append, insert, and remove
+	</div>
+</div>

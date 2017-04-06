@@ -7,12 +7,19 @@ try
 	$userid = getCookie('userid');
 
 	// Get file from browser
+	$challengeId = $_POST['challengeId'];
 	$file = $_FILES['file'];
 	$filename = $file['name'];
 	if(substr($filename,-3) != ".py")
 		returnError(NULL, NULL, NULL, "Only Python (.py) files accepted");
 	$tmpName = $file['tmp_name'];
 	$userPython = file_get_contents($tmpName);
+
+	// Store submission in DB
+	require_once(__DIR__ . "/../db/DBchallenges.php");
+	$db = new DBchallenges();
+	$rc = $db->insertSubmission($userid, $challengeId, $userPython);
+	$db->commit();
 
 	// Blacklist Python code
 	$blacklist = array(
@@ -35,7 +42,6 @@ try
 	file_put_contents($pyFile, $execPython, LOCK_EX);
 
 	// Add test code to file
-	$challengeId = $_POST['challengeId'];
 	$testCode = file_get_contents("../challenges/$challengeId.py");
 	file_put_contents($pyFile, $testCode, FILE_APPEND | LOCK_EX);
 
@@ -62,14 +68,11 @@ try
 	}
 
 	// Mark challenge complete and save code in forum
-	require_once(__DIR__ . "/../db/DBchallenges.php");
 	$db = new DBchallenges();
 	$rc = $db->markChallengeComplete($userid, $challengeId);
 	if($rc != 0)
 		$db->returnError("Error marking complete");
 	$rc = $db->updateChallengeCode($userid, $challengeId, $userPython);
-	if($rc != 0)
-		$db->returnError("Error updating code");
 	$db->commit();
 	echo json_encode(array("correct" => true));
 }

@@ -107,6 +107,15 @@ class DBchallenges
 		}
 	}
 
+	public function insertSubmission($userid, $challengeId, $code)
+	{
+		$sql = "INSERT INTO code_submissions (user_id, challenge_id, code, created_date_time) VALUES (?, ?, ?, now())";
+		$stmt = $this->dbh->prepare($sql);
+		$success = $stmt->execute(array($userid, $challengeId, $code));
+		$this->error = $stmt->errorInfo();
+                return $stmt->errorCode();
+	}
+
 	public function markChallengeComplete($userid, $challengeId)
 	{
 		$sql = "INSERT INTO user_challenges (user_id, challenge_id, completed_date_time) VALUES (?, ?, now()) ON DUPLICATE KEY UPDATE completed_date_time=now()";

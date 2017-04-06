@@ -1,15 +1,5 @@
 TODO
 
-Week 10
-	x Fix boggle UI
-		x Change description in UI (remove board file download, talk about how to loop through dictionary, need boggle_score(board_string) function to take a 25-char string and return the score for the board, etc.)
-	- 1 new chapter (chapter 9 - lists)
-		- Range exercise
-		- Review
-	- 2 new challenges
-		- palindrome
-		- reverseword
-	- Save every challenge submission in DB for data mining
 Week 11
 	- 1 new chapter
 	- 2 new challenges

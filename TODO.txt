@@ -1,5 +1,6 @@
 TODO
 
 Week 11
-	- 1 new chapter (chapter 11 - loops)
-	- 2 new challenges
+	- chapter 11
+	- string composition UI
+	- make change UI

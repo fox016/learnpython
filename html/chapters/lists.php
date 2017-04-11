@@ -1,5 +1,5 @@
 <p>
-A list is a simple concept that can provide a lot of power in the world of computer programming. This chapter will cover some of the basics about lists. Lists will be covered more in depth in later chapters (especially the chapter on loops) as related topics are explored.
+A list is a simple concept that can provide a lot of power in the world of computer programming. This chapter will cover some of the basics about lists. Lists will be covered more in depth in later chapters (especially the <a target="_blank" href="./?chapter=iteration">chapter on loops</a>) as related topics are explored.
 </p>
 
 <p>

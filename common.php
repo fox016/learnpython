@@ -21,8 +21,8 @@ function buildChapterList()
 	$chapterManager->addChapter("conditionals", "Conditionals");
 	$chapterManager->addChapter("errors", "Fixing Errors");
 	$chapterManager->addChapter("lists", "Lists");
-/*
 	$chapterManager->addChapter("iteration", "Loops");
+/*
 	$chapterManager->addChapter("install", "Install Python");
 	$chapterManager->addChapter("fileio", "File I/O");
 	$chapterManager->addChapter("dictionaries", "Dictionaries");

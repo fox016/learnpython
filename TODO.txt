@@ -1,6 +1,4 @@
 TODO
 
 Week 11
-	- chapter 11
-	- string composition UI
-	- make change UI
+	- chapter 11 (finish)

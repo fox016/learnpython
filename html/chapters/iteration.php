@@ -127,10 +127,88 @@ You can use a while loop to do an index loop through a list, though most program
 names = ["Bob", "Sue"]
 while index < len(names):
 	print(names[index])
-	index = index + 1</code></pre>
+	index = index + 1
+print("done")</code></pre>
 
-The first time through this loop, index is 0. 0 is less than <code>len(names)</code>, so the loop executes. The body of the loop prints <code>names[0]</code>, then index is set to 1. 1 is less than <code>len(names)</code>, so the loop executes again because the condition <code>index < len(names)</code> is still true. The body of the loop prints <code>names[1]</code>, then index is set to 2. 2 is not less than <code>len(names)</code>, so the loop won't run again because the condition <code>index < len(names)</code> is finally false.
+<p>
+The first time through this loop, index is 0. 0 is less than <code>len(names)</code>, so the conditional statement evaluates as <code>true</code>, meaning the loop executes. The body of the loop prints <code>names[0]</code>, then index is set to 1. 1 is less than <code>len(names)</code>, so the loop executes again because the condition <code>index < len(names)</code> is still true. The body of the loop prints <code>names[1]</code>, then index is set to 2. 2 is not less than <code>len(names)</code>, so the loop won't run again because the condition <code>index < len(names)</code> is finally false. The loop will exit and the program will print "done".
+</p>
 
+<p>
+While loops can do more than iterate through lists. You can use the conditional statement of a while loop for many purposes. You can create a countdown like this:
+</p>
+
+<pre><code>from time import sleep # this let's me use the sleep function
+
+n = 10
+while n > 0:
+	print(str(n) + " seconds left"
+	sleep(1) # wait for 1 second
+	n = n-1
+print("blast off!")</code></pre>
+
+<p>
+This code will print the number 10, wait one second, set <code>n</code> to 9, print 9, wait one second, and follow that pattern until the loop prints 1 and sets <code>n</code> to 0. Once <code>n</code> is set to 0, the conditional <code>while n &gt; 0</code> will return false and the loop will exit and the program will print "blast off!".
+</p>
 
 <h2>Break and Continue Statements</h2>
-Using 'break' and 'continue'
+
+Within a loop, you can use <code>break</code> and <code>continue</code> statements for finer control over when the loop should exit. These statements should be used sparingly. The best way to control a while loop is to use a well thought out conditional statement, and the best way to control a for loop is to use a well thought out list to iterate over.
+
+<p>
+The <code>break</code> statement makes the loop stop early. It exits the loop and the program continues running the rest of the code. This might be useful if you're looking through a list for something specific and you want the loop to stop once you find what you're looking for. Use the following exercise to explore this idea.
+</p> 
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+	names = ["Rob", "Kyle", "Sara", "Bill", "Sandy", "Cindy"]
+	b_name = False
+	for name in names:
+		print("Look at name " + name)
+		if name[0] == "B":
+			b_name = name
+			break # what happens if you remove this?
+	if b_name:
+		print("Found name that starts with B: " + b_name)
+	else:
+		print("No name that starts with B was found")
+	</code>
+</div>
+
+How does this code using a for loop and a break statement compare to this code using a while loop?
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+	names = ["Rob", "Kyle", "Sara", "Bill", "Sandy", "Cindy"]
+	index = 0
+	while index < len(names) and names[index][0] != "B":
+		print("Look at name " + names[index])
+		index += 1
+	if index >= len(names):
+		print("No name that starts with B was found")
+	else:
+		print("Found name that starts with B: " + names[index])
+	</code>
+</div>
+
+So in this case, you can use a while loop without a break statement instead of a for loop with a break statement to do the same thing. Use whatever method makes more sense to you. If the for loop with the break statement is easier to read and understand, then use it. Otherwise, use the while loop approach.
+
+<p>
+The <code>continue</code> statement can be harder to understand. It tells the loop to skip the current value but to continue running the loop for the next value. For example, assume you have a list of people at a party. You want everyone to say "hi" to everyone else, but nobody to say "hi" to themselves. Use the exercise below to experiment with this principle.
+</p>
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="sample-code">
+	names = ["Rob", "Kyle", "Sara", "Bill", "Sandy", "Cindy"]
+	for person1 in names:
+		for person2 in names:
+			# if the same person, skip and go to the next person
+			if person1 == person2:
+				continue # what happens if you change this to a break statement?
+			print(person1 + ' needs to say "hi" to ' + person2)
+	</code>
+</div>
+
+<h2>Review</h2>
+
+TODO

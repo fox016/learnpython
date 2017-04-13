@@ -211,4 +211,28 @@ The <code>continue</code> statement can be harder to understand. It tells the lo
 
 <h2>Review</h2>
 
-TODO
+For the exercise below, there is a secret list of strings named <code>sentences</code>. For each sentence, first print the sentence. Then break the sentence into words (there is only one space between each word) and print out each word individually). Then go on to the next sentence.
+
+<div data-datacamp-exercise data-lang="python">
+	<code data-type="pre-exercise-code">
+		sentences = ["I like using loops", "Pythons are dangerous snakes", "What's that blue thing doing here?", "Everybody wants prosthetic foreheads on their real heads"]
+	</code>
+	<code data-type="sample-code">
+	for sentence in sentences:
+		print(sentence)
+		# for each word in sentence, print it
+	</code>
+	<code data-type="solution">
+	for sentence in sentences:
+		print(sentence)
+		# for each word in sentence, print it
+		for word in sentence.split(" "):
+			print(word)
+	</code>
+	<code data-type="sct">
+		test_output_contains("I like using loops\nI\nlike\nusing\nloops\nPythons are dangerous snakes\nPythons\nare\ndangerous\nsnakes\nWhat's that blue thing doing here?\nWhat's\nthat\nblue\nthing\ndoing\nhere?\nEverybody wants prosthetic foreheads on their real heads\nEverybody\nwants\nprosthetic\nforeheads\non\ntheir\nreal\nheads", False, "Wrong output")
+	</code>
+	<div data-type="hint">
+		Remember the <code><em>list</em>.split(<em>str</em>)</code> function
+	</div>
+</div>
